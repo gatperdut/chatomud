@@ -19,7 +19,7 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module ChatomudNew
+module Chatomud
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
@@ -36,5 +36,17 @@ module ChatomudNew
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.after_initialize do
+      if Rails.const_defined?(:Server) && !Rails.env.test?
+        require "chato_mud/server"
+
+        Thread.abort_on_exception = true
+        Thread.new do
+          ::Server = ChatoMud::Server.new
+          ::Server.listen
+        end
+      end
+    end
   end
 end
