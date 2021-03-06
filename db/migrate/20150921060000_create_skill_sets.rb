@@ -1,4 +1,5 @@
 class CreateSkillSets < ActiveRecord::Migration[6.1]
+
   def change
     create_table :skill_sets do |t|
       t.references :character, null: false, index: true
@@ -56,5 +57,8 @@ class CreateSkillSets < ActiveRecord::Migration[6.1]
       # Forging
       t.integer :metalworking, null: false, default: 0
     end
+
+    add_foreign_key :skill_sets, :characters, on_delete: :cascade
   end
+
 end

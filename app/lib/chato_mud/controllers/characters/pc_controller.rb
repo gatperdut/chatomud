@@ -2,9 +2,13 @@ require "chato_mud/controllers/characters/character_controller"
 require "chato_mud/controllers/characters/editing_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class PcController < CharacterController
+
         attr_reader :editing_controller
 
         def initialize(server, player_controller, character, room_controller)
@@ -24,7 +28,11 @@ module ChatoMud
         def interrupt_editing
           @editing_controller.interrupt_editing
         end
+
       end
+
     end
+
   end
+
 end

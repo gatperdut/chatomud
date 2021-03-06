@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module FollowStop
+
             def recv_follow_stop(params)
               emitter = params[:emitter]
 
@@ -13,9 +19,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

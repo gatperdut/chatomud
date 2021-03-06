@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Periodic
+
     module Tasks
+
       class HealingPulse
+
         def initialize(server)
           @server = server
         end
@@ -13,7 +17,11 @@ module ChatoMud
             character_controller.health_controller.catch_breath
           end
         end
+
       end
+
     end
+
   end
+
 end

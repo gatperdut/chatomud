@@ -1,6 +1,7 @@
 require "chato_mud/mixins/aasm/definition"
 
 class Aasm < ApplicationRecord
+
   extend ChatoMud::Mixins::Aasm::Definition
 
   belongs_to :character
@@ -18,4 +19,5 @@ class Aasm < ApplicationRecord
   def belongs_only_to_npcs
     errors.add(:character_id, "can only belong to NPCs") unless character.is_npc?
   end
+
 end

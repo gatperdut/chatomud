@@ -5,9 +5,13 @@ require "chato_mud/mixins/directions/utils"
 require "chato_mud/actions/look_around"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class WalkingController
+
         include Mixins::Characters::Walking::Pacer
         include Mixins::Directions::Utils
 
@@ -62,7 +66,11 @@ module ChatoMud
           @walking_thread = nil
           @direction      = nil
         end
+
       end
+
     end
+
   end
+
 end

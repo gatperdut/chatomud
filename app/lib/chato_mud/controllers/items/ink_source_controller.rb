@@ -2,9 +2,13 @@ require "chato_mud/mixins/ink_types/utils"
 require "chato_mud/mixins/ink_types/dipping"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class InkSourceController
+
         include Mixins::InkTypes::Utils
         include Mixins::InkTypes::Dipping
 
@@ -55,7 +59,11 @@ module ChatoMud
         def model
           @ink_source
         end
+
       end
+
     end
+
   end
+
 end

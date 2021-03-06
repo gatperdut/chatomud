@@ -5,9 +5,13 @@ require "chato_mud/mixins/crafts/result"
 require "chato_mud/mixins/characters/physical_attrs/genders/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Crafts
+
       module Step
+
         include Mixins::Random::Utils
         include Mixins::Crafts::Usage
         include Mixins::Crafts::Result
@@ -95,7 +99,11 @@ module ChatoMud
         def emit_step_echo(text_self, text_others)
           @character_controller.room_controller.emit_action_echo("craft_echo", { emitter: @character_controller, text_self: text_self, text_others: text_others })
         end
+
       end
+
     end
+
   end
+
 end

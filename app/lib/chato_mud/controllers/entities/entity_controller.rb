@@ -1,9 +1,13 @@
 require "chato_mud/controllers/entities/possession/possession_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Entities
+
       class EntityController
+
         attr_reader :character_controller
         attr_reader :possession_controller
 
@@ -27,7 +31,11 @@ module ChatoMud
         def handle_command(command)
           @character_controller.interpret(command)
         end
+
       end
+
     end
+
   end
+
 end

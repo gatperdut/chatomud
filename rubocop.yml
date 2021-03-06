@@ -13,13 +13,14 @@ AllCops:
     - "config/**/*.rb"
     - "lib/**/*.rb"
     - "spec/**/*.rb"
+    - "db/migrate/*.rb"
     - "db/seeds.rb"
     - "db/seeds/**/*.rb"
 
   Exclude:
     - "bin/*"
     - "db/schema.rb"
-    - "db/migrate/*"
+    # - "db/migrate/*"
     - "log/**/*"
     - "node_modules/**/*"
     - "public/**/*"
@@ -31,6 +32,12 @@ AllCops:
 
 Layout/CaseIndentation:
   Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: "empty_lines"
+
+Layout/EmptyLinesAroundModuleBody:
+  EnforcedStyle: "empty_lines"
 
 Layout/ExtraSpacing:
   Exclude:

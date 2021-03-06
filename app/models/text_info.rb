@@ -4,6 +4,7 @@ require "chato_mud/mixins/ink_types/definition"
 require "chato_mud/mixins/ink_types/utils"
 
 class TextInfo < ApplicationRecord
+
   extend ChatoMud::Mixins::Languages::Definition
   extend ChatoMud::Mixins::Scripts::Definition
   extend ChatoMud::Mixins::InkTypes::Definition
@@ -54,4 +55,5 @@ class TextInfo < ApplicationRecord
 
     errors.add(:ink_type, "must be of dipping type if item is Writing and non-wipeable") unless is_dipping_ink_type?(ink_type)
   end
+
 end

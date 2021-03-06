@@ -2,6 +2,7 @@ require "chato_mud/mixins/characters/skill_set/definition"
 require "chato_mud/mixins/characters/attribute_set/definition"
 
 class SkillCategory < ApplicationRecord
+
   extend ChatoMud::Mixins::Characters::SkillSet::Definition
   extend ChatoMud::Mixins::Characters::AttributeSet::Definition
 
@@ -24,4 +25,5 @@ class SkillCategory < ApplicationRecord
       errors.add(:dependencies, "invalid dependency '#{dependency}'") unless self.class.all_attributes.include?(dependency)
     end
   end
+
 end

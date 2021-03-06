@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module SimpleSay
+
             def recv_simple_say(params)
               emitter = params[:emitter]
               speech  = params[:speech]
@@ -19,9 +25,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

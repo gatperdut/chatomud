@@ -1,4 +1,5 @@
 class SystemController < ApplicationController
+
   def info
     render json: {
       ruby_version: RUBY_VERSION,
@@ -11,4 +12,5 @@ class SystemController < ApplicationController
       time_string: Server.timer.calendar.time_string
     }
   end
+
 end

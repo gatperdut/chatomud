@@ -1,8 +1,12 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       # Move within 'searching' folder along with 'searcher'
       module SearcherItc
+
         def search_ingredient_controllers(craft_ingredient)
           item_templates = []
           craft_ingredient.item_template_codes.each do |item_template_code|
@@ -25,7 +29,11 @@ module ChatoMud
         def search_ingredient_controllers_held(craft_ingredient, item_templates)
           @inventory_controller.find_held_ingredient_controllers(craft_ingredient, item_templates)
         end
+
       end
+
     end
+
   end
+
 end

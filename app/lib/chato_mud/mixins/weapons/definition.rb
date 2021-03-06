@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Weapons
+
       module Definition
+
         def all_weapon_bases
           all_melee_bases + all_ranged_bases
         end
@@ -40,7 +44,11 @@ module ChatoMud
             :crossbow
           ]
         end
+
       end
+
     end
+
   end
+
 end

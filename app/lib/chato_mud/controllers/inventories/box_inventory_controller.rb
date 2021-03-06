@@ -2,9 +2,13 @@ require "chato_mud/controllers/inventories/inventory_controller"
 require "chato_mud/controllers/inventories/lid_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Inventories
+
       class BoxInventoryController < InventoryController
+
         attr_reader :lid_controller
 
         def initialize(server, owner_controller, inventory)
@@ -29,7 +33,11 @@ module ChatoMud
         def model
           @inventory
         end
+
       end
+
     end
+
   end
+
 end

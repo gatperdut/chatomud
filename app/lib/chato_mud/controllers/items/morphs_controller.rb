@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class MorphsController
+
         def initialize(server, item_controller)
           @server          = server
           @item_controller = item_controller
@@ -34,7 +38,11 @@ module ChatoMud
         def sputter_on_item(goes_out)
           # Nothing. Should not even happen.
         end
+
       end
+
     end
+
   end
+
 end

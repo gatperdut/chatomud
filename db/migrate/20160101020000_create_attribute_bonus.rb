@@ -1,4 +1,5 @@
 class CreateAttributeBonus < ActiveRecord::Migration[6.1]
+
   def change
     create_table :attribute_bonus do |t|
       t.integer :limit, null: false
@@ -6,4 +7,5 @@ class CreateAttributeBonus < ActiveRecord::Migration[6.1]
       t.string :label, null: false
     end
   end
+
 end

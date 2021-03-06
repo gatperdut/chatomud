@@ -2,9 +2,13 @@ require "chato_mud/controllers/base_controller"
 require "chato_mud/controllers/inventories/ranged_weapon_inventory_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class RangedStatController < BaseController
+
         attr_reader :inventory_controller
 
         def initialize(server, weapon_stat_controller, ranged_stat)
@@ -22,7 +26,11 @@ module ChatoMud
         def can_remain_loaded?
           @ranged_stat.can_remain_loaded
         end
+
       end
+
     end
+
   end
+
 end

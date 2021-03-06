@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module Carrier
+
           def carried_item_controllers
             held_item_controllers + wielded_item_controllers
           end
@@ -19,8 +24,13 @@ module ChatoMud
               @owner_controller.room_controller.inventory_controller.accept_item(item_controller, true)
             end
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -2,10 +2,15 @@ require "chato_mud/mixins/items/amounts"
 require "chato_mud/mixins/items/amount_data_fluid"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       module Amounts
+
         class FluidController
+
           include Mixins::Items::Amounts
           include Mixins::Items::AmountDataFluid
 
@@ -59,8 +64,13 @@ module ChatoMud
           def model
             @fluid
           end
+
         end
+
       end
+
     end
+
   end
+
 end

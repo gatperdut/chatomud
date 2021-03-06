@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Players
+
       module Login
+
         def show_login_prompt
           case @state
             when :providing_nickname
@@ -23,7 +27,7 @@ module ChatoMud
           end
         end
 
-        # TODO Handle unconfirmed accounts.
+        # TODO: Handle unconfirmed accounts.
         def handle_password(password, socket)
           if @player.valid_password?(password)
             handle_correct_authentication(socket)
@@ -59,7 +63,11 @@ module ChatoMud
             bye(true)
           end
         end
+
       end
+
     end
+
   end
+
 end

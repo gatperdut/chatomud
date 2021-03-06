@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module CeaseAiming
+
             def recv_cease_aiming(params)
               emitter = params[:emitter]
               reason  = params[:reason]
@@ -37,9 +43,15 @@ module ChatoMud
 
               tx(result)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

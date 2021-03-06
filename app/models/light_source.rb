@@ -1,4 +1,5 @@
 class LightSource < ApplicationRecord
+
   belongs_to :item
 
   has_one :capacity, class_name: "Amount", foreign_key: "fuelable_id", dependent: :destroy
@@ -49,4 +50,5 @@ class LightSource < ApplicationRecord
   def must_be_lit_if_eternal
     errors.add(:lit, " must be true if the light is eternal") if !lit && is_eternal?
   end
+
 end

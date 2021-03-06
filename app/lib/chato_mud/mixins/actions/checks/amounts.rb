@@ -1,10 +1,15 @@
 require "chato_mud/mixins/fluids/definition"
 
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Amounts
+
           include ChatoMud::Mixins::Fluids::Definition
 
           def check_is_valid_amount(amount, message = nil)
@@ -62,8 +67,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

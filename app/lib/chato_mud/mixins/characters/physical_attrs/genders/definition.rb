@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module PhysicalAttrs
+
         module Genders
+
           module Definition
+
             def all_genders
               [
                 :male,
@@ -19,9 +25,15 @@ module ChatoMud
                 neuter: 1.0
               }
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

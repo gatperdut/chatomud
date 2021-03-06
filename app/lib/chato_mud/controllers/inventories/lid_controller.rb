@@ -2,9 +2,13 @@ require "chato_mud/mixins/closable"
 require "chato_mud/controllers/lock_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Inventories
+
       class LidController
+
         attr_reader :lock_controller
 
         include Mixins::Closable
@@ -21,7 +25,11 @@ module ChatoMud
         def model
           @lid
         end
+
       end
+
     end
+
   end
+
 end

@@ -10,9 +10,13 @@ require "chato_mud/mixins/characters/combat/ranged_target"
 require "chato_mud/mixins/characters/combat/fleer"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class CombatController
+
         attr_reader :character_controller
         attr_reader :target
         attr_reader :flee_direction
@@ -102,7 +106,11 @@ module ChatoMud
         def attack_referrer
           @server.attack_referrer
         end
+
       end
+
     end
+
   end
+
 end

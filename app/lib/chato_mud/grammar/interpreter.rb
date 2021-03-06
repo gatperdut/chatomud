@@ -1,11 +1,14 @@
-require "chato_mud/interpreter/parser"
+require "chato_mud/grammar/parser"
 
 require "chato_mud/actions/base_action"
 require_all "app/lib/chato_mud/actions/**/*.rb"
 
 module ChatoMud
+
   module Grammar
+
     class Interpreter
+
       def initialize(server, character_controller)
         @server = server
         @character_controller = character_controller
@@ -75,6 +78,9 @@ module ChatoMud
       def is_quiet_possession?
         @character_controller.entity_controller.possession_controller.quietly
       end
+
     end
+
   end
+
 end

@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Inventories
+
           def check_character_can_hold(character_controller, item_controller, message = nil)
             unless character_controller.inventory_controller.can_hold?(item_controller)
               tx(message) if message
@@ -26,8 +31,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

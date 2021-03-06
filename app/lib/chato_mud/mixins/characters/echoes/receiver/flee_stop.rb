@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module FleeStop
+
             def recv_flee_stop(params)
               emitter = params[:emitter]
               reason  = params[:reason]
@@ -16,9 +22,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,4 +1,5 @@
 class CreateSkills < ActiveRecord::Migration[6.1]
+
   def change
     create_table :skills do |t|
       t.integer :name, null: false
@@ -8,4 +9,5 @@ class CreateSkills < ActiveRecord::Migration[6.1]
       t.string :dependencies, null: false, array: true, default: [].to_yaml
     end
   end
+
 end

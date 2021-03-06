@@ -2,6 +2,7 @@ require "chato_mud/mixins/weapons/definition"
 require "chato_mud/mixins/damage/definition"
 
 class Attack < ApplicationRecord
+
   extend ChatoMud::Mixins::Weapons::Definition
   extend ChatoMud::Mixins::Damage::Definition
 
@@ -44,4 +45,5 @@ class Attack < ApplicationRecord
 
     errors.add(:critical_type, "must be assigned when a critical severity is given")
   end
+
 end

@@ -1,4 +1,5 @@
 class CraftsController < ApplicationController
+
   before_action :authenticate_player!
 
   before_action :set_craft, only: [
@@ -99,4 +100,5 @@ class CraftsController < ApplicationController
       ]
     )
   end
+
 end

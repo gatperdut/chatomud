@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Stand < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -12,6 +15,9 @@ module ChatoMud
         room_controller.emit_action_echo("stand", { emitter: @character_controller })
         position_controller.stand
       end
+
     end
+
   end
+
 end

@@ -1,10 +1,15 @@
 require "chato_mud/mixins/characters/skill_set/definition"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module SkillSet
+
         module Utils
+
           include Mixins::Characters::SkillSet::Definition
 
           def list_skill_set
@@ -141,8 +146,13 @@ module ChatoMud
               brawl:        :brawl
             }
           end
+
         end
+
       end
+
     end
+
   end
+
 end

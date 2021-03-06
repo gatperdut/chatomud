@@ -1,6 +1,7 @@
 require "chato_mud/mixins/damage/definition"
 
 class Critical < ApplicationRecord
+
   extend ChatoMud::Mixins::Damage::Definition
 
   enum damage_type: all_critical_types
@@ -54,4 +55,5 @@ class Critical < ApplicationRecord
       raise "unknown value for enum :parry_stun_type"
     end
   end
+
 end

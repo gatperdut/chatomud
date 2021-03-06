@@ -1,4 +1,5 @@
 class PlayersController < ApplicationController
+
   before_action :authenticate_player!, only: [
     :show,
     :destroy
@@ -59,4 +60,5 @@ class PlayersController < ApplicationController
       ]
     )
   end
+
 end

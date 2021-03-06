@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Furnitures
+
       module Accommodator
+
         def accommodate(position_controller)
           @position_controllers << position_controller
         end
@@ -47,7 +51,11 @@ module ChatoMud
           end
           text
         end
+
       end
+
     end
+
   end
+
 end

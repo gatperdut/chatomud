@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Grip < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -48,6 +51,9 @@ module ChatoMud
         room_controller.emit_action_echo("grip", { emitter: @character_controller, target: wielded_controller, grip: :two_handed })
         wielded_controller.set_slot(:w2hands, true)
       end
+
     end
+
   end
+
 end

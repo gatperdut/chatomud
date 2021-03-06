@@ -1,9 +1,13 @@
 require "chato_mud/mixins/ink_types/utils"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class WritingImplementController
+
         include Mixins::InkTypes::Utils
 
         def initialize(server, item_controller, writing_implement)
@@ -50,7 +54,11 @@ module ChatoMud
           @writing_implement.charged = true
           @writing_implement.save!
         end
+
       end
+
     end
+
   end
+
 end

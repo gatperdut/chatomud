@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module Sound
+
             def recv_sound(params)
               emitter     = params[:emitter]
               target      = params[:target]
@@ -12,9 +18,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

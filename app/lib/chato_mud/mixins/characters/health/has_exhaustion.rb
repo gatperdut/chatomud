@@ -1,10 +1,15 @@
 require "chato_mud/mixins/characters/health/definition"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Health
+
         module HasExhaustion
+
           include Mixins::Characters::Health::Definition
 
           def max_exhaustion
@@ -90,8 +95,13 @@ module ChatoMud
           def can_catch_breath?
             !@character_controller.combat_controller.is_attacking?
           end
+
         end
+
       end
+
     end
+
   end
+
 end

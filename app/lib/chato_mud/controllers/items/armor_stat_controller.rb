@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class ArmorStatController
+
         def initialize(server, item_controller, armor_stat)
           @server = server
           @item_controller = item_controller
@@ -35,7 +39,11 @@ module ChatoMud
         def ranged_attack_impediment
           @armor_stat.ranged_attack_impediment.to_sym
         end
+
       end
+
     end
+
   end
+
 end

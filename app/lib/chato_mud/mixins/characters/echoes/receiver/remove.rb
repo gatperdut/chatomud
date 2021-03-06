@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module Remove
+
             def recv_remove(params)
               emitter = params[:emitter]
               target  = params[:target]
@@ -16,9 +22,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

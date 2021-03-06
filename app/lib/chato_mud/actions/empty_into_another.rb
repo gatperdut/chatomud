@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class EmptyIntoAnother < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -42,6 +45,9 @@ module ChatoMud
         room_controller.emit_action_echo("empty_into_another", { emitter: @character_controller, target: target_item_controller, destination: destination_item_controller })
         target_item_controller.inventory_controller.dump_items_into(destination_item_controller)
       end
+
     end
+
   end
+
 end

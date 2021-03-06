@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Items
+
       module Book
+
         def title
           post_controller = find_post_controller_for_page(0)
 
@@ -84,7 +88,11 @@ module ChatoMud
         def is_wipeable?
           false
         end
+
       end
+
     end
+
   end
+
 end

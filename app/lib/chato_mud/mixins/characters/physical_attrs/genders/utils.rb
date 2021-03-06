@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module PhysicalAttrs
+
         module Genders
+
           module Utils
+
             def to_be(gender)
               return "is"  if gender == :male
               return "is"  if gender == :female
@@ -56,9 +62,15 @@ module ChatoMud
 
               raise "Trying to find voice with unknown gender."
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

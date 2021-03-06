@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Closable
+
           def check_is_closable(inventory_controller, message = nil)
             unless inventory_controller.is_closable?
               tx(message) if message
@@ -26,8 +31,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

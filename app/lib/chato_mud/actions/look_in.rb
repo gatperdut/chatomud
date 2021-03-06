@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class LookIn < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -46,6 +49,9 @@ module ChatoMud
 
         tx("It is #{@controller.fillable_summary}.")
       end
+
     end
+
   end
+
 end

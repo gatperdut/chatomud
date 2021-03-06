@@ -1,9 +1,13 @@
 require "chato_mud/actions/unload"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class LoadController
+
         def initialize(server, character_controller)
           @server = server
           @character_controller = character_controller
@@ -62,7 +66,11 @@ module ChatoMud
           @pre_finish = false
           @load_thread&.terminate
         end
+
       end
+
     end
+
   end
+
 end

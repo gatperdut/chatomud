@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Encumbrance
+
         module Utils
+
           def encumbrance_description(encumbrance_level)
             case encumbrance_level
               when 0
@@ -19,8 +24,13 @@ module ChatoMud
                 raise "Unknown encumbrance level when determining encumbrance description."
             end
           end
+
         end
+
       end
+
     end
+
   end
+
 end

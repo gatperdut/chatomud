@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module AttributeSet
+
         module Definition
+
           def all_attributes
             [
               :str,
@@ -14,8 +19,13 @@ module ChatoMud
               :pow
             ]
           end
+
         end
+
       end
+
     end
+
   end
+
 end

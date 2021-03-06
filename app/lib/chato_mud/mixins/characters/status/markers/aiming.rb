@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Status
+
         module Markers
+
           module Aiming
+
             def aim_marker
               case @aim_controller.aim_stage
                 when :not_aiming
@@ -36,9 +42,15 @@ module ChatoMud
                 ""
               end
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

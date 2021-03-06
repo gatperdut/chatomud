@@ -1,6 +1,7 @@
 require "chato_mud/mixins/characters/attribute_set/definition"
 
 class AttributeSetTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::Characters::AttributeSet::Definition
 
   belongs_to :character_template
@@ -20,4 +21,5 @@ class AttributeSetTemplate < ApplicationRecord
       errors.add(:preference, "#{attribute} is not present") unless preference.include?(attribute)
     end
   end
+
 end

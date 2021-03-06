@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Crafts < BaseAction
+
       def exec
         return unless can_perform?([:unconscious, :sitting_or_resting])
 
@@ -18,6 +21,9 @@ module ChatoMud
 
         @character_controller.crafts_controller.start_crafting(craft)
       end
+
     end
+
   end
+
 end

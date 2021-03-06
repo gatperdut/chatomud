@@ -1,4 +1,5 @@
 class Superarea < ApplicationRecord
+
   has_many :areas, dependent: :destroy
 
   validates :name, presence: true
@@ -12,4 +13,5 @@ class Superarea < ApplicationRecord
   def at_least_one_area
     errors.add(:base, "when creating a superarea at least one area must be provided") if areas.empty?
   end
+
 end

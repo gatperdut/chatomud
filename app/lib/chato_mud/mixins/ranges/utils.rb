@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Ranges
+
       module Utils
+
         def range_modifier(ranges_suitability, range)
           index = ranges_suitability.index_of(range)
 
@@ -9,7 +13,11 @@ module ChatoMud
 
           [5, 0, -10, -25][index]
         end
+
       end
+
     end
+
   end
+
 end

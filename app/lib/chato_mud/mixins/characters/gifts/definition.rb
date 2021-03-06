@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Gifts
+
         module Definition
+
           def all_gifts
             racial_gifts + psionic_gifts
           end
@@ -18,8 +23,13 @@ module ChatoMud
               :psionic_reach
             ]
           end
+
         end
+
       end
+
     end
+
   end
+
 end

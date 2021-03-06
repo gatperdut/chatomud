@@ -1,10 +1,15 @@
 require "chato_mud/mixins/items/amounts"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       module Amounts
+
         class StackController
+
           include Mixins::Items::Amounts
 
           def initialize(item_controller, stack)
@@ -25,8 +30,13 @@ module ChatoMud
           def model
             @stack
           end
+
         end
+
       end
+
     end
+
   end
+
 end

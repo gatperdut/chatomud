@@ -2,8 +2,11 @@ require "chato_mud/mixins/characters/physical_attrs/races/definition"
 require "chato_mud/mixins/characters/physical_attrs/genders/definition"
 
 module ChatoMud
+
   module Referrers
+
     class FrameModifierReferrer
+
       include Mixins::Characters::PhysicalAttrs::Races::Definition
       include Mixins::Characters::PhysicalAttrs::Genders::Definition
 
@@ -32,6 +35,9 @@ module ChatoMud
           end
         end
       end
+
     end
+
   end
+
 end

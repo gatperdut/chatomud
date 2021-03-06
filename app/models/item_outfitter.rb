@@ -1,4 +1,5 @@
 class ItemOutfitter < ApplicationRecord
+
   validate :codes_must_point_to_item_templates
 
   validates :code, presence: true, uniqueness: true
@@ -30,4 +31,5 @@ class ItemOutfitter < ApplicationRecord
       errors.add(:item_template_codes, "contains invalid codes") unless valid_content?(itc)
     end
   end
+
 end

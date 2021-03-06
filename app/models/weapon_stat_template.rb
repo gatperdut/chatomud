@@ -2,6 +2,7 @@ require "chato_mud/mixins/grips/definition"
 require "chato_mud/mixins/weapons/definition"
 
 class WeaponStatTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::Grips::Definition
   extend ChatoMud::Mixins::Weapons::Definition
 
@@ -38,4 +39,5 @@ class WeaponStatTemplate < ApplicationRecord
     errors.add(:melee_stat_template, "either this or ranged_stat_template must be set")
     errors.add(:ranged_stat_template, "either this or melee_stat_template must be set")
   end
+
 end

@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module PhysicalAttrs
+
         module Height
+
           module Definition
+
             def all_height_categories
               [
                 :diminute,
@@ -15,9 +21,15 @@ module ChatoMud
                 :colossal
               ]
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,9 +1,13 @@
 require "chato_mud/controllers/inventories/box_inventory_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Inventories
+
       class RangedWeaponInventoryController < BoxInventoryController
+
         def loaded_missile_controller
           @item_controllers[0]
         end
@@ -15,7 +19,11 @@ module ChatoMud
         def list_loaded_missile
           loaded_missile_controller.short_desc
         end
+
       end
+
     end
+
   end
+
 end

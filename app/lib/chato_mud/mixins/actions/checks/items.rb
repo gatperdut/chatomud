@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Items
+
           def check_not_in_use(item_controller, message = nil)
             if item_controller.in_use == true
               tx(message) if message
@@ -42,8 +47,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

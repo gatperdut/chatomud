@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Players
+
       module MainMenu
+
         def show_main_menu_prompt
           case @state
             when :main_menu
@@ -54,7 +58,11 @@ module ChatoMud
           tx("ANSI coloring is now #{'on'.green}.\n") if @player.setting.ansi_coloring
           tx("ANSI coloring is now off.\n") unless @player.setting.ansi_coloring
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module FinishLoading
+
             def recv_finish_loading(params)
               emitter       = params[:emitter]
               missile       = params[:missile]
@@ -16,9 +22,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

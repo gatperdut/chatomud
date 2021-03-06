@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Wield < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -26,6 +29,9 @@ module ChatoMud
 
         @character_controller.inventory_controller.wield(target_controller)
       end
+
     end
+
   end
+
 end

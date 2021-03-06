@@ -2,6 +2,7 @@ require "chato_mud/mixins/slots/definition"
 require "securerandom"
 
 class ItemTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::Slots::Definition
 
   before_destroy :check_no_associated_items
@@ -210,4 +211,5 @@ class ItemTemplate < ApplicationRecord
   def abort_if_necessary
     throw :abort if errors[:base].length.positive?
   end
+
 end

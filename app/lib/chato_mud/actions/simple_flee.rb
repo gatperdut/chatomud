@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SimpleFlee < BaseAction
+
       def exec
         return unless can_perform?([:unconscious, :sitting_or_resting, :not_in_combat])
 
@@ -15,6 +18,9 @@ module ChatoMud
 
         @character_controller.combat_controller.flee(directions.sample, true)
       end
+
     end
+
   end
+
 end

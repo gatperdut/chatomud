@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Switch < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -35,6 +38,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("switch", { emitter: @character_controller, left: left, right: right })
       end
+
     end
+
   end
+
 end

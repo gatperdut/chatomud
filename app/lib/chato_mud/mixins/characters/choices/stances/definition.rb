@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Choices
+
         module Stances
+
           module Definition
+
             def all_stances
               [
                 :pacifist,
@@ -15,9 +21,15 @@ module ChatoMud
                 :frenzy
               ]
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,8 +1,11 @@
 require "chato_mud/mixins/characters/choices/stances/utils"
 
 module ChatoMud
+
   module Actions
+
     class Combat < BaseAction
+
       include Mixins::Characters::Choices::Stances::Utils
 
       def exec
@@ -46,6 +49,9 @@ module ChatoMud
       def ranged_defensive_summary
         @character_controller.stats_controller.ranged_defensive_capability
       end
+
     end
+
   end
+
 end

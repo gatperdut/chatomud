@@ -1,9 +1,13 @@
 require "chato_mud/mixins/characters/attribute_set/definition"
 
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class ChoicesFactory
+
         extend Mixins::Characters::AttributeSet::Definition
 
         def initialize(server)
@@ -16,7 +20,11 @@ module ChatoMud
 
           choice
         end
+
       end
+
     end
+
   end
+
 end

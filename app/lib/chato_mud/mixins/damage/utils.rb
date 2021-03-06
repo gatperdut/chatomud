@@ -1,9 +1,13 @@
 require "chato_mud/mixins/random/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Damage
+
       module Utils
+
         include Mixins::Random::Utils
 
         def regular_damage_type_for(type)
@@ -71,7 +75,11 @@ module ChatoMud
 
           raise "check the jsons, something is wrong"
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module WeaponWielder
+
           def wield(item_controller)
             slot = get_wield_slot(item_controller)
             item_controller.set_slot(slot, true)
@@ -58,8 +63,13 @@ module ChatoMud
           def is_wielding_two_handed?
             !find_item_controller_by_slot(:w2hands).nil?
           end
+
         end
+
       end
+
     end
+
   end
+
 end

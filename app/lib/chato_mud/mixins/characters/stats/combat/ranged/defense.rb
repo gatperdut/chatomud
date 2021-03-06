@@ -1,10 +1,17 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Stats
+
         module Combat
+
           module Ranged
+
             module Defense
+
               def ranged_defensive_capability
                 deflect_mode = @character_controller.combat_controller.ranged_deflect_mode
 
@@ -65,10 +72,17 @@ module ChatoMud
 
                 0
               end
+
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Helpers
+
         module Items
+
           def handle_spawned_stack(item_controller, amount, inventory_controller)
             attributes = item_controller.split_stack_attributes(amount)
 
@@ -14,8 +19,13 @@ module ChatoMud
 
             new_item_controller
           end
+
         end
+
       end
+
     end
+
   end
+
 end

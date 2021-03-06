@@ -1,8 +1,12 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       # Possible rename to KwordSearcher and move within 'searching' folder along with searcher_itc
       module Searcher
+
         def search_character_controller(kword)
           @room_controller.find_character_controller(kword)
         end
@@ -99,7 +103,11 @@ module ChatoMud
 
           search_item_controller_room(kword)
         end
+
       end
+
     end
+
   end
+
 end

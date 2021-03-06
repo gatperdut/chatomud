@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Rooms
+
       module CharactersContainer
+
         def add_character_controller(character_controller)
           @character_controllers << character_controller
         end
@@ -62,7 +66,11 @@ module ChatoMud
             text
           end.join("\n")
         end
+
       end
+
     end
+
   end
+
 end

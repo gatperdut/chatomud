@@ -1,6 +1,7 @@
 require "chato_mud/mixins/slots/definition"
 
 class CharacterOutfitter < ApplicationRecord
+
   extend ChatoMud::Mixins::Slots::Definition
 
   validate :codes_must_point_to_item_templates
@@ -35,4 +36,5 @@ class CharacterOutfitter < ApplicationRecord
       errors.add(:item_template_codes, "contains the invalid code '#{item_template_codes[wloc]}'") unless valid_content?(item_template_codes[wloc])
     end
   end
+
 end

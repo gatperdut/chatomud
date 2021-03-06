@@ -2,6 +2,7 @@ require "chato_mud/mixins/ink_types/definition"
 require "chato_mud/mixins/ink_types/utils"
 
 class InkSourceTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::InkTypes::Definition
   include ChatoMud::Mixins::InkTypes::Utils
 
@@ -40,4 +41,5 @@ class InkSourceTemplate < ApplicationRecord
 
     errors.add(:spawned_item_template, "must be a writing implement template") unless spawned_item_template.is_writing_implement_template?
   end
+
 end

@@ -1,12 +1,19 @@
 require "chato_mud/mixins/characters/stats/combat/stances"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Stats
+
         module Combat
+
           module Melee
+
             module Defense
+
               include Mixins::Characters::Stats::Combat::Stances
 
               def melee_defensive_capability(assailant_controller = nil)
@@ -101,10 +108,17 @@ module ChatoMud
 
                 value
               end
+
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

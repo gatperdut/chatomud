@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class GetContainer < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -47,6 +50,9 @@ module ChatoMud
       def echo(source_controller, target_item_controller)
         room_controller.emit_action_echo("get_container", { emitter: @character_controller, source: source_controller, target: target_item_controller })
       end
+
     end
+
   end
+
 end

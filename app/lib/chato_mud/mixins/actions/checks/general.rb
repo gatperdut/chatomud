@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module General
+
           def check_target_present(target_controller, message = nil)
             unless target_controller
               tx(message) if message
@@ -41,8 +46,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

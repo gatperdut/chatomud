@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Rooms
+
       module Showable
+
         def show(character_controller)
           [
             "#{list_title(character_controller, 0)} [#{model.id}]\n",
@@ -72,7 +76,11 @@ module ChatoMud
           @server.timer.calendar.is_daylight_period? ||
           is_illuminated?
         end
+
       end
+
     end
+
   end
+
 end

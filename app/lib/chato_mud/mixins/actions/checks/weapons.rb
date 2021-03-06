@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Weapons
+
           def check_missile_type_is(missile_controller, missile_type, message = nil)
             unless missile_controller.missile_stat_controller.is_missile_type?(missile_type)
               tx(message) if message
@@ -84,8 +89,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

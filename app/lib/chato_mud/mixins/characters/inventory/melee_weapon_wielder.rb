@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module MeleeWeaponWielder
+
           # :held, :wielded, :held_or_wielded, :in_sheaths
           def melee_weapon_controllers(where)
             send("melee_weapon_controllers_#{where}")
@@ -37,8 +42,13 @@ module ChatoMud
             end
             result
           end
+
         end
+
       end
+
     end
+
   end
+
 end

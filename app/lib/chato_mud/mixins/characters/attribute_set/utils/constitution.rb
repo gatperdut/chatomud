@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module AttributeSet
+
         module Utils
+
           module Constitution
+
             def con_max_wounds_healed_per_pulse
               case attribute_value(:con)
                 when  1..10
@@ -41,9 +47,15 @@ module ChatoMud
                   5
               end
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

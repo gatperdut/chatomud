@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Fluids
+
       module Definition
+
         def all_fluids
           [
             :water,
@@ -28,7 +32,11 @@ module ChatoMud
             oil:   false
           }
         end
+
       end
+
     end
+
   end
+
 end

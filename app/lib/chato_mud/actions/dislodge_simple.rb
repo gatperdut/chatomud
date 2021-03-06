@@ -1,8 +1,11 @@
 require "chato_mud/mixins/body_parts/definition"
 
 module ChatoMud
+
   module Actions
+
     class DislodgeSimple < BaseAction
+
       include Mixins::BodyParts::Definition
 
       def exec
@@ -30,6 +33,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("dislodge_simple", { emitter: @character_controller, body_part: body_part, missile: missile_controller })
       end
+
     end
+
   end
+
 end

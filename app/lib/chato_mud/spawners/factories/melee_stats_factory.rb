@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class MeleeStatsFactory
+
         def initialize(server)
           @server = server
         end
@@ -12,7 +16,11 @@ module ChatoMud
 
           melee_stat
         end
+
       end
+
     end
+
   end
+
 end

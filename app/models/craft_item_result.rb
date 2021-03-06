@@ -1,6 +1,7 @@
 require "chato_mud/mixins/characters/skill_set/definition"
 
 class CraftItemResult < ApplicationRecord
+
   extend ChatoMud::Mixins::Characters::SkillSet::Definition
 
   belongs_to :craft_step
@@ -32,4 +33,5 @@ class CraftItemResult < ApplicationRecord
     errors.add(:item_template_code, "'#{item_template_code}' should be stackable") if  must_be_stackable && !is_stackable
     errors.add(:item_template_code, "'#{item_template_code}' cannot be stackable") if !must_be_stackable &&  is_stackable
   end
+
 end

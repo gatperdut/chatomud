@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module GetContainer
+
             def recv_get_container(params)
               emitter = params[:emitter]
               source  = params[:source]
@@ -17,9 +23,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

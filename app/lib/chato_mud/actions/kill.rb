@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Kill < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -17,6 +20,9 @@ module ChatoMud
         tx("You kill #{character_controller.short_desc}.")
         character_controller.die
       end
+
     end
+
   end
+
 end

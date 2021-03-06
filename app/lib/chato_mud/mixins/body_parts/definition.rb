@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module BodyParts
+
       module Definition
+
         def all_body_parts
           [
             :head, :face, :leye, :reye, :neck,
@@ -12,7 +16,11 @@ module ChatoMud
             :lshin, :rshin, :lankle, :rankle, :lfoot, :rfoot
           ]
         end
+
       end
+
     end
+
   end
+
 end

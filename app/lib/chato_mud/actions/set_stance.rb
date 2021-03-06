@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SetStance < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -19,6 +22,9 @@ module ChatoMud
         @character_controller.combat_controller.handle_become_pacifist if @character_controller.choice_controller.stance_is?(:pacifist)
         @character_controller.combat_controller.handle_become_belligerent unless @character_controller.choice_controller.stance_is?(:pacifist)
       end
+
     end
+
   end
+
 end

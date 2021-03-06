@@ -3,9 +3,13 @@ require "chato_mud/mixins/describable/door"
 require "chato_mud/mixins/closable"
 
 module ChatoMud
+
   module Controllers
+
     module Rooms
+
       class DoorController
+
         attr_reader :lock_controller
 
         include Mixins::Rooms::Doors::Connected
@@ -49,7 +53,11 @@ module ChatoMud
         def id
           @door.id
         end
+
       end
+
     end
+
   end
+
 end

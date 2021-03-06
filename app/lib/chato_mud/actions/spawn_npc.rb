@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SpawnNpc < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -20,6 +23,9 @@ module ChatoMud
         character_controller = @server.characters_spawner.spawn_npc(npc_template, character_outfitter.item_template_codes, @character_controller.room_controller, { gladiator: false })
         tx("Spawned #{character_controller.short_desc} and outfitted with '#{character_outfitter_code}'.")
       end
+
     end
+
   end
+
 end

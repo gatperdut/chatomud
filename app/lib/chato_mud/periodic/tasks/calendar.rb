@@ -2,9 +2,13 @@ require "chato_mud/mixins/periodic/calendar/definition"
 require "chato_mud/mixins/periodic/calendar/utils"
 
 module ChatoMud
+
   module Periodic
+
     module Tasks
+
       class Calendar
+
         include ChatoMud::Mixins::Periodic::Calendar::Definition
         include ChatoMud::Mixins::Periodic::Calendar::Utils
 
@@ -72,7 +76,11 @@ module ChatoMud
             second:  ig_second
           }
         end
+
       end
+
     end
+
   end
+
 end

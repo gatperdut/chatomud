@@ -1,8 +1,11 @@
 require "chato_mud/mixins/slots/definition"
 
 module ChatoMud
+
   module Actions
+
     class Title < BaseAction
+
       include Mixins::Slots::Definition
 
       def exec
@@ -37,6 +40,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("title", { emitter: @character_controller, target: target_item_controller, source: source_item_controller })
       end
+
     end
+
   end
+
 end

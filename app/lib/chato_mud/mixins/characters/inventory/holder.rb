@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module Holder
+
           def held_item_controllers
             item_controllers_ordered_by_slot.reject do |item_controller|
               !item_controller.is_in_slot?(:lhand) && !item_controller.is_in_slot?(:rhand)
@@ -43,8 +48,13 @@ module ChatoMud
             wielded_left_hand = find_item_controller_by_slot(:wlhand)
             !wielded_left_hand || wielded_left_hand == item_controller
           end
+
         end
+
       end
+
     end
+
   end
+
 end

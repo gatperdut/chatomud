@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module MeleeAttack
+
             def recv_melee_attack(params)
               @params = params
 
@@ -63,9 +69,15 @@ module ChatoMud
                 text << " fist."
               end
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

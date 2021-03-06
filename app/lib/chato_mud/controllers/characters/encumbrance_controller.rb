@@ -1,9 +1,13 @@
 require "chato_mud/mixins/armor/utils"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class EncumbranceController
+
         include Mixins::Armor::Utils
 
         def initialize(server, character_controller)
@@ -56,7 +60,11 @@ module ChatoMud
 
           (protection.max_penalty / 4.0 * ranged_attack_impediment_factor).round
         end
+
       end
+
     end
+
   end
+
 end

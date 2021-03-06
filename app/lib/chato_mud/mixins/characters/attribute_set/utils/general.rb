@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module AttributeSet
+
         module Utils
+
           module General
+
             def attribute_value(attribute)
               @attribute_set.send(attribute)
             end
@@ -28,9 +34,15 @@ module ChatoMud
               end
               text
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

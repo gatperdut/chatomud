@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Read < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -16,6 +19,9 @@ module ChatoMud
 
         tx("\n#{item_controller.writing_controller.read(@character_controller)}") if item_controller.is_writing?
       end
+
     end
+
   end
+
 end

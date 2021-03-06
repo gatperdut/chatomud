@@ -2,6 +2,7 @@ require "chato_mud/mixins/weapons/definition"
 require "chato_mud/mixins/grips/definition"
 
 class WeaponStat < ApplicationRecord
+
   extend ChatoMud::Mixins::Weapons::Definition
   extend ChatoMud::Mixins::Grips::Definition
 
@@ -44,4 +45,5 @@ class WeaponStat < ApplicationRecord
   def ranged_weapons_must_have_grip_both
     errors.add(:grip, "must be :both for ranged weapons") if ranged_stat && grip.to_sym != :both
   end
+
 end

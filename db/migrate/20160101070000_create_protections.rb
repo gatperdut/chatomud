@@ -1,4 +1,5 @@
 class CreateProtections < ActiveRecord::Migration[6.1]
+
   def change
     create_table :protections do |t|
       t.integer :level, null: false
@@ -8,4 +9,5 @@ class CreateProtections < ActiveRecord::Migration[6.1]
       t.integer :max_penalty, null: false
     end
   end
+
 end

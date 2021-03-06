@@ -1,5 +1,7 @@
 module ChatoMud
+
   module CmSocket
+
     def rx
       input = gets
       input = input.encode("UTF-8", "binary", invalid: :replace, undef: :replace, replace: "")
@@ -22,5 +24,7 @@ module ChatoMud
         remote_address.inspect_sockaddr
       end
     end
+
   end
+
 end

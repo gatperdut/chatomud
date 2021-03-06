@@ -1,9 +1,13 @@
 require "chato_mud/mixins/shield/utils"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class ShieldStatController
+
         include Mixins::Shield::Utils
 
         def initialize(server, item_controller, shield_stat)
@@ -31,7 +35,11 @@ module ChatoMud
         def max_opponents_blocked
           max_opponents_blocked_for(variant.to_sym)
         end
+
       end
+
     end
+
   end
+
 end

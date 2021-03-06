@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Shield
+
       module Utils
+
         def melee_bonus_for(variant)
           case variant
             when :wall
@@ -46,7 +50,11 @@ module ChatoMud
               raise "unknown shield variant '#{variant}'"
           end
         end
+
       end
+
     end
+
   end
+
 end

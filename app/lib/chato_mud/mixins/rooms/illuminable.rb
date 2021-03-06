@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Rooms
+
       module Illuminable
+
         def is_illuminated?
           light_source_in_room? || light_source_in_characters? || light_source_in_furniture?
         end
@@ -29,7 +33,11 @@ module ChatoMud
             item_controller.light_source_controller.is_lit?
           end
         end
+
       end
+
     end
+
   end
+
 end

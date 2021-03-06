@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class CalmdownAll < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -12,6 +15,9 @@ module ChatoMud
 
         character_controllers.each(&:calmdown)
       end
+
     end
+
   end
+
 end

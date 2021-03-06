@@ -1,9 +1,7 @@
 class CreateCharacterApplications < ActiveRecord::Migration[6.1]
 
   def change
-
     create_table :character_applications do |t|
-
       t.references :player, index: true
 
       t.string :name, null: false
@@ -17,9 +15,7 @@ class CreateCharacterApplications < ActiveRecord::Migration[6.1]
       t.string :kwords, array: true
 
       t.string :skill_picks, array: true
-
     end
-
   end
 
 end

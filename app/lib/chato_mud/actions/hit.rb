@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Hit < BaseAction
+
       def exec
         return unless can_perform?([:unconscious, :sitting_or_resting])
 
@@ -38,6 +41,9 @@ module ChatoMud
 
         @character_controller.combat_controller.fight(character_controller, true)
       end
+
     end
+
   end
+
 end

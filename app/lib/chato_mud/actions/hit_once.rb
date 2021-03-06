@@ -1,7 +1,10 @@
 module ChatoMud
+
   module Actions
+
     # DEBUG
     class HitOnce < BaseAction
+
       def exec
         return unless can_perform?([:unconscious, :sitting_or_resting])
 
@@ -25,6 +28,9 @@ module ChatoMud
 
         @character_controller.combat_controller.perform_melee_attacks(character_controller)
       end
+
     end
+
   end
+
 end

@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Equality
+
           def check_equality(first_controller, second_controller, message = nil)
             unless first_controller == second_controller
               tx(message) if message
@@ -18,8 +23,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

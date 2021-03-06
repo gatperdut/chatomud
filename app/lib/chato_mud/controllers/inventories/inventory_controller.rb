@@ -6,9 +6,13 @@ require "chato_mud/mixins/inventories/weight_bearer"
 require "chato_mud/controllers/items/item_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Inventories
+
       class InventoryController
+
         include Mixins::Inventories::IngredientsContainer
         include Mixins::Inventories::LightSourcesContainer
         include Mixins::Inventories::BoardsContainer
@@ -88,7 +92,11 @@ module ChatoMud
           end
           nil
         end
+
       end
+
     end
+
   end
+
 end

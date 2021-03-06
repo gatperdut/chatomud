@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module SimpleSit
+
             def recv_simple_sit(params)
               emitter = params[:emitter]
               from    = params[:from]
@@ -33,9 +39,15 @@ module ChatoMud
             def in_combat_warning(emitter)
               emitter.combat_controller.is_being_attacked? ? "You are going to get slaughtered! Are YOU MAD??!\n".red : ""
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,6 +1,7 @@
 require "chato_mud/mixins/characters/skill_set/definition"
 
 class Rank < ApplicationRecord
+
   extend ChatoMud::Mixins::Characters::SkillSet::Definition
 
   enum rate: all_rank_rates
@@ -12,4 +13,5 @@ class Rank < ApplicationRecord
   def unskilled?
     value.zero?
   end
+
 end

@@ -1,4 +1,5 @@
 class CreateRooms < ActiveRecord::Migration[6.1]
+
   def change
     create_table :rooms do |t|
       t.string :title, null: false
@@ -7,7 +8,7 @@ class CreateRooms < ActiveRecord::Migration[6.1]
 
       t.text :description_nighttime
 
-      t.references :area,  null: false, index: true
+      t.references :area, null: false, index: true
 
       t.boolean :arena, null: false, default: false
 
@@ -31,5 +32,15 @@ class CreateRooms < ActiveRecord::Migration[6.1]
       t.references :ud,  null: true, index: true
       t.references :dd,  null: true, index: true
     end
+
+    add_foreign_key :rooms, :areas, on_delete: :cascade
+
+    add_foreign_key :rooms, :rooms, column: :nr_id,  on_delete: :restrict
+    add_foreign_key :rooms, :rooms, column: :er_id,  on_delete: :restrict
+    add_foreign_key :rooms, :rooms, column: :sr_id,  on_delete: :restrict
+    add_foreign_key :rooms, :rooms, column: :wr_id,  on_delete: :restrict
+    add_foreign_key :rooms, :rooms, column: :ur_id,  on_delete: :restrict
+    add_foreign_key :rooms, :rooms, column: :dr_id,  on_delete: :restrict
   end
+
 end

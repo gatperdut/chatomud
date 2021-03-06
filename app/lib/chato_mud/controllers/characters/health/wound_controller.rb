@@ -3,10 +3,15 @@ require "chato_mud/controllers/inventories/wound_inventory_controller"
 require "chato_mud/mixins/body_parts/utils"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       module Health
+
         class WoundController
+
           include Mixins::BodyParts::Utils
 
           attr_reader :inventory_controller
@@ -94,8 +99,13 @@ module ChatoMud
             @health_controller.remove_wound_controller(self)
             @wound.destroy
           end
+
         end
+
       end
+
     end
+
   end
+
 end

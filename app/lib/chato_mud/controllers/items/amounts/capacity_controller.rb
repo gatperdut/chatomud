@@ -1,10 +1,15 @@
 require "chato_mud/mixins/items/amounts"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       module Amounts
+
         class CapacityController
+
           include Mixins::Items::Amounts
 
           def initialize(light_source_controller, capacity)
@@ -75,8 +80,13 @@ module ChatoMud
 
             @light_source_controller.item_controller.morphs_controller.sputter(false)
           end
+
         end
+
       end
+
     end
+
   end
+
 end

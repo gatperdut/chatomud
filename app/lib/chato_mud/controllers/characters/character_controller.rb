@@ -1,4 +1,4 @@
-require "chato_mud/interpreter/interpreter"
+require "chato_mud/grammar/interpreter"
 
 require "chato_mud/controllers/base_controller"
 
@@ -30,9 +30,13 @@ require "chato_mud/mixins/characters/searcher_itc"
 require "chato_mud/mixins/characters/status/utils"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class CharacterController < BaseController
+
         attr_reader :inventory_controller
         attr_reader :walking_controller
         attr_reader :stats_controller
@@ -270,7 +274,11 @@ module ChatoMud
         def handle_controllers_unconsciousness
           handle_controllers_common
         end
+
       end
+
     end
+
   end
+
 end

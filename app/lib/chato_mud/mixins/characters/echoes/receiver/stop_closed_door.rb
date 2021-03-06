@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module StopClosedDoor
+
             def recv_stop_closed_door(params)
               emitter = params[:emitter]
               door_controller = params[:door_controller]
@@ -16,9 +22,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

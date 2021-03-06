@@ -1,9 +1,13 @@
 require "chato_mud/mixins/random/utils"
 
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class PhysicalAttrsFactory
+
         include Mixins::Random::Utils
 
         def initialize(server)
@@ -62,7 +66,11 @@ module ChatoMud
             weight: weight_base_frame.weight
           }
         end
+
       end
+
     end
+
   end
+
 end

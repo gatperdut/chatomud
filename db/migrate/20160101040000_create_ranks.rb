@@ -1,4 +1,5 @@
 class CreateRanks < ActiveRecord::Migration[6.1]
+
   def change
     create_table :ranks do |t|
       t.integer :rate, null: false, default: 0
@@ -7,4 +8,5 @@ class CreateRanks < ActiveRecord::Migration[6.1]
       t.integer :bonus, null: false
     end
   end
+
 end

@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module FollowNewLeader
+
             def recv_follow_new_leader(params)
               group_members = params[:group_members]
               target        = params[:target]
@@ -17,9 +23,15 @@ module ChatoMud
                 tx(interpolate_me_other(group_member, "You fall into stride with the new group leader, #{target.short_desc}.", "#{group_member.short_desc} falls into stride with #{target.short_desc}."))
               end
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

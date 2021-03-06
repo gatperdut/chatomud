@@ -4,6 +4,7 @@ require "chato_mud/mixins/characters/choices/stances/definition"
 require "chato_mud/mixins/characters/choices/paces/definition"
 
 class ChoiceTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::Languages::Definition
   extend ChatoMud::Mixins::Scripts::Definition
   extend ChatoMud::Mixins::Characters::Choices::Stances::Definition
@@ -22,4 +23,5 @@ class ChoiceTemplate < ApplicationRecord
   validates_inclusion_of :editor_echoes, in: [true, false]
 
   validates :character_template, :stance, :pace, :language, :script, presence: true
+
 end

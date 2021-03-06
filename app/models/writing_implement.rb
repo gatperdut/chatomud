@@ -2,6 +2,7 @@ require "chato_mud/mixins/ink_types/definition"
 require "chato_mud/mixins/ink_types/utils"
 
 class WritingImplement < ApplicationRecord
+
   extend ChatoMud::Mixins::InkTypes::Definition
   include ChatoMud::Mixins::InkTypes::Utils
 
@@ -38,4 +39,5 @@ class WritingImplement < ApplicationRecord
 
     errors.add(:ink_type, "must be a dipping ink_type if not single_use") unless is_dipping_ink_type?(ink_type)
   end
+
 end

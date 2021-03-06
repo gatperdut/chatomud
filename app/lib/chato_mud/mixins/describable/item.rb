@@ -4,9 +4,13 @@ require "chato_mud/mixins/describable/closable"
 require "chato_mud/mixins/slots/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Describable
+
       module Item
+
         include Common
         include Closable
         include Slots::Utils
@@ -186,7 +190,11 @@ module ChatoMud
         def stack_summary
           stack_controller.current
         end
+
       end
+
     end
+
   end
+
 end

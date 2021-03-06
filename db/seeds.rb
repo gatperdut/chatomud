@@ -1,7 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
-
 puts "Seeding data..."
 puts "map (superareas, areas & rooms)"
 require File.join(Rails.root, "db", "seeds", "map", "01_superareas.rb")

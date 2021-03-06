@@ -1,4 +1,5 @@
 class CreateCriticals < ActiveRecord::Migration[6.1]
+
   def change
     create_table :criticals do |t|
       t.integer :damage_type, null: false
@@ -22,4 +23,5 @@ class CreateCriticals < ActiveRecord::Migration[6.1]
     end
     add_index :criticals, [:damage_type, :severity, :score_limit]
   end
+
 end

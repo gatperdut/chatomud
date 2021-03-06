@@ -8,6 +8,8 @@ class CreateCraftTests < ActiveRecord::Migration[6.1]
 
       t.integer :modifier, null: false
     end
+
+    add_foreign_key :craft_tests, :craft_steps, on_delete: :cascade
   end
 
 end

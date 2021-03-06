@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Activate < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -22,6 +25,9 @@ module ChatoMud
 
         character_controller.activate
       end
+
     end
+
   end
+
 end

@@ -9,8 +9,11 @@ require "chato_mud/periodic/tasks/fuel_consumption_pulse"
 require "chato_mud/periodic/tasks/nourishment_burner"
 
 module ChatoMud
+
   module Periodic
+
     class Timer
+
       include Mixins::Periodic::Calendar::Definition
       include Mixins::Periodic::HealingPulse::Definition
       include Mixins::Periodic::FuelConsumptionPulse::Definition
@@ -64,6 +67,9 @@ module ChatoMud
       def must_tick(seconds)
         (@timestamp % seconds).zero?
       end
+
     end
+
   end
+
 end

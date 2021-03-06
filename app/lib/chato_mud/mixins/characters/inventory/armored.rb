@@ -1,10 +1,15 @@
 require "chato_mud/mixins/armor/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module Armored
+
           include Mixins::Armor::Utils
 
           def armor_controllers_for(body_part)
@@ -80,8 +85,13 @@ module ChatoMud
 
             text
           end
+
         end
+
       end
+
     end
+
   end
+
 end

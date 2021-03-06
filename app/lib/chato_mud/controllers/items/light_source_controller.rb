@@ -6,9 +6,13 @@ require "chato_mud/mixins/describable/light_source"
 require "chato_mud/mixins/periodic/fuel_consumption_pulse/definition"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class LightSourceController
+
         include Mixins::Describable::LightSource
         include Mixins::Periodic::FuelConsumptionPulse::Definition
 
@@ -113,7 +117,11 @@ module ChatoMud
         def toggle
           @light_source.lit = !@light_source.lit
         end
+
       end
+
     end
+
   end
+
 end

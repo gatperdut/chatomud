@@ -1,9 +1,13 @@
 require "chato_mud/mixins/slots/definition"
 
 module ChatoMud
+
   module Mixins
+
     module Items
+
       module Wearable
+
         include Mixins::Slots::Definition
 
         def is_wearable?
@@ -34,7 +38,11 @@ module ChatoMud
           model.slot = slot
           model.save! if do_save
         end
+
       end
+
     end
+
   end
+
 end

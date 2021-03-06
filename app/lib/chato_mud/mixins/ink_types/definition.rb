@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module InkTypes
+
       module Definition
+
         def all_ink_types
           all_picking_ink_types + all_dipping_ink_types
         end
@@ -23,7 +27,11 @@ module ChatoMud
             :scarlet_ink
           ]
         end
+
       end
+
     end
+
   end
+
 end

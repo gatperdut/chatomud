@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Inventories
+
       module IngredientsContainer
+
         def find_ingredient_controllers(craft_ingredient, item_templates, item_controllers_subset)
           item_controllers_subset ||= @item_controllers
 
@@ -34,7 +38,11 @@ module ChatoMud
             item_controllers: item_controllers
           }
         end
+
       end
+
     end
+
   end
+
 end

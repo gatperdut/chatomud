@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Crafts
+
       module Result
+
         # @ingredients =
         # {
         #   craft_ingredient: craft_ingredient,
@@ -28,7 +32,11 @@ module ChatoMud
 
           new_item_controller
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module PhysicalAttrs
+
         module Races
+
           module Definition
+
             def all_races
               [
                 :human,
@@ -25,9 +31,15 @@ module ChatoMud
                 troll:  5000
               }
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

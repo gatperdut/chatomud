@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Directions
+
       module Utils
+
         def abbreviature(direction)
           case direction
             when :north
@@ -62,7 +66,11 @@ module ChatoMud
               raise "unknown direction"
           end
         end
+
       end
+
     end
+
   end
+
 end

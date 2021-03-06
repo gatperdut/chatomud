@@ -1,9 +1,13 @@
 require "chato_mud/mixins/characters/comms/guesser"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class CommsController
+
         include Mixins::Characters::Comms::Guesser
 
         def initialize(server, character_controller)
@@ -111,7 +115,11 @@ module ChatoMud
         def skill_mod(skill)
           @character_controller.stats_controller.skill_modifier(skill)
         end
+
       end
+
     end
+
   end
+
 end

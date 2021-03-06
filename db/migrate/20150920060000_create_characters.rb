@@ -1,4 +1,5 @@
 class CreateCharacters < ActiveRecord::Migration[6.1]
+
   def change
     create_table :characters do |t|
       t.string :name, null: false
@@ -19,6 +20,9 @@ class CreateCharacters < ActiveRecord::Migration[6.1]
 
       t.references :room, index: true, null: false
     end
+
+    add_foreign_key :characters, :players, on_delete: :cascade
+    add_foreign_key :characters, :rooms, on_delete: :restrict
   end
 
 end

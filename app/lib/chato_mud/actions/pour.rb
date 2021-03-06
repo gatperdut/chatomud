@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Pour < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -24,6 +27,9 @@ module ChatoMud
         room_controller.emit_action_echo("pour", { emitter: @character_controller, source: item_controller, amount: amount_controller })
         amount_controller.consume(amount_controller.current)
       end
+
     end
+
   end
+
 end

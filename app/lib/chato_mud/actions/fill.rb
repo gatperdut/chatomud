@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Fill < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -54,6 +57,9 @@ module ChatoMud
         source_amount_controller.consume(amount)
         target_amount_controller.add(amount, source_amount_controller.fluid)
       end
+
     end
+
   end
+
 end

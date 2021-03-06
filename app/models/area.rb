@@ -1,4 +1,5 @@
 class Area < ApplicationRecord
+
   has_many :rooms, dependent: :destroy
 
   belongs_to :superarea
@@ -14,4 +15,5 @@ class Area < ApplicationRecord
   def at_least_one_room
     errors.add(:base, "when creating an area at least one room must be provided") if rooms.empty?
   end
+
 end

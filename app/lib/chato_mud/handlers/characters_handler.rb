@@ -1,8 +1,11 @@
 # TODO: add logging (inherited from server?)
 
 module ChatoMud
+
   module Handlers
+
     class CharactersHandler
+
       attr_reader :character_controllers
 
       def initialize(server)
@@ -65,6 +68,9 @@ module ChatoMud
       def npc_controllers
         @character_controllers.select(&:is_npc?)
       end
+
     end
+
   end
+
 end

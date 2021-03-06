@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Characters
+
           def check_character_is_not_possessed(character_controller, message = nil)
             if character_controller.entity_controller.possession_controller.is_possessed?
               tx(message) if message
@@ -42,8 +47,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

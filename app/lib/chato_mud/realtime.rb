@@ -1,4 +1,5 @@
 module Realtime
+
   # For more realtime methods just append the method name to the array
   # it will automatically send the method name as action redis param
   # which in turn maps to a javascript function
@@ -23,4 +24,5 @@ module Realtime
       end
     end
   end
+
 end

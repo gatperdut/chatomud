@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+
   belongs_to :parent, polymorphic: true
 
   has_one :text_info, as: :parent, dependent: :destroy, inverse_of: :parent
@@ -50,4 +51,5 @@ class Post < ApplicationRecord
 
     errors.add(:text_info, "must be present if parent is not Writing") unless text_info.present?
   end
+
 end

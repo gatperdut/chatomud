@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Follow < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -50,6 +53,9 @@ module ChatoMud
 
         @character_controller.group_controller.follow(character_controller)
       end
+
     end
+
   end
+
 end

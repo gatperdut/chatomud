@@ -5,10 +5,15 @@ require "chato_mud/mixins/characters/status/markers/fleeing"
 require "chato_mud/mixins/characters/encumbrance/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Status
+
         module Utils
+
           include Mixins::Characters::Status::Markers::Visibility
           include Mixins::Characters::Status::Markers::Aiming
           include Mixins::Characters::Status::Markers::Target
@@ -96,8 +101,13 @@ module ChatoMud
                 raise "marks number over 100%"
             end
           end
+
         end
+
       end
+
     end
+
   end
+
 end

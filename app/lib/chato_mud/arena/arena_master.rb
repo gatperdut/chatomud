@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Arena
+
     class ArenaMaster
+
       def initialize(server)
         @server = server
         @room_controllers = @server.rooms_handler.arena_rooms
@@ -20,6 +23,9 @@ module ChatoMud
           replenish
         end
       end
+
     end
+
   end
+
 end

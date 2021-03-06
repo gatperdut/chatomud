@@ -1,10 +1,15 @@
 require "chato_mud/mixins/random/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Combat
+
         module MeleeTarget
+
           include Mixins::Random::Utils
 
           def can_be_attacked?
@@ -60,8 +65,13 @@ module ChatoMud
               assailant.combat_controller.send("handle_#{reason}_opponent")
             end
           end
+
         end
+
       end
+
     end
+
   end
+
 end

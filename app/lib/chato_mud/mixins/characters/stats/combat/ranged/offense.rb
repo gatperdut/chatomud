@@ -1,12 +1,19 @@
 require "chato_mud/mixins/characters/skill_set/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Stats
+
         module Combat
+
           module Ranged
+
             module Offense
+
               include Mixins::Characters::SkillSet::Utils
 
               def ranged_offensive_capability
@@ -38,10 +45,17 @@ module ChatoMud
                   critical_mod: critical_mod
                 }
               end
+
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

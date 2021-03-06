@@ -4,9 +4,13 @@ require "chato_mud/mixins/characters/physical_attrs/genders/definition"
 require "chato_mud/mixins/characters/nourishment/definition"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class NourishmentController
+
         include Mixins::Periodic::NourishmentBurner::Definition
         include Mixins::Characters::PhysicalAttrs::Races::Definition
         include Mixins::Characters::PhysicalAttrs::Genders::Definition
@@ -134,7 +138,11 @@ module ChatoMud
 
           @character_controller.tx("You are #{messages}.")
         end
+
       end
+
     end
+
   end
+
 end

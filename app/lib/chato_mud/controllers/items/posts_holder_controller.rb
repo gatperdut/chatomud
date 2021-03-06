@@ -1,9 +1,13 @@
 require "chato_mud/controllers/items/post_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class PostsHolderController
+
         attr_reader :post_controllers
 
         def initialize(server, item_controller, posts)
@@ -31,7 +35,11 @@ module ChatoMud
         def remove_post_controller(post_controller)
           @post_controllers.delete(post_controller) unless post_controller.nil?
         end
+
       end
+
     end
+
   end
+
 end

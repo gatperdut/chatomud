@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Light < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -41,6 +44,9 @@ module ChatoMud
           item_controller.light_source_controller.turn_on
         end
       end
+
     end
+
   end
+
 end

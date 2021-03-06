@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Damage
+
       module Definition
+
         def all_critical_severities
           [
             :A,
@@ -34,7 +38,11 @@ module ChatoMud
             :parry_penalty
           ]
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Combat
+
         module MeleeDamageDealer
+
           def perform_melee_attacks(target_controller)
             melee_offensive_capabilities = @character_controller.stats_controller.melee_offensive_capabilities
 
@@ -17,8 +22,13 @@ module ChatoMud
             handle_dead_opponent        if target_controller.health_controller.is_dead?
             handle_unconscious_opponent if target_controller.health_controller.is_unconscious?
           end
+
         end
+
       end
+
     end
+
   end
+
 end

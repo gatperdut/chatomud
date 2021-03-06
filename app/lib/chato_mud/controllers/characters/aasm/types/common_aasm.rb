@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       module Aasm
+
         module Types
+
           class CommonAasm
+
             include AASM
 
             def initialize(server, aasm_controller)
@@ -164,9 +170,15 @@ module ChatoMud
             def character_controller
               @aasm_controller.character_controller
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

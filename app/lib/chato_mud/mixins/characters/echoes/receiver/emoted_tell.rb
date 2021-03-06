@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module EmotedTell
+
             def recv_emoted_tell(params)
               target  = params[:target]
               emitter = params[:emitter]
@@ -18,9 +24,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

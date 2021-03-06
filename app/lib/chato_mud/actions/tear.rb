@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Tear < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -32,6 +35,9 @@ module ChatoMud
         room_controller.emit_action_echo("tear_writing", { emitter: @character_controller, target: @item_controller })
         @item_controller.junk(true)
       end
+
     end
+
   end
+
 end

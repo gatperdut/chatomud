@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SimpleNews < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -14,6 +17,9 @@ module ChatoMud
 
         tx("\n#{item_controller.board_controller.list(1)}")
       end
+
     end
+
   end
+
 end

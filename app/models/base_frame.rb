@@ -2,6 +2,7 @@ require "chato_mud/mixins/characters/physical_attrs/height/definition"
 require "chato_mud/mixins/characters/physical_attrs/races/definition"
 
 class BaseFrame < ApplicationRecord
+
   extend ChatoMud::Mixins::Characters::PhysicalAttrs::Height::Definition
   extend ChatoMud::Mixins::Characters::PhysicalAttrs::Races::Definition
 
@@ -18,4 +19,5 @@ class BaseFrame < ApplicationRecord
   validates :column, numericality: { only_integer: true, less_than_or_equal_to: 26, greater_than_or_equal_to: 0 }
 
   validates :height, :weight, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
 end

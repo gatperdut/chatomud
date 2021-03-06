@@ -1,6 +1,7 @@
 require "chato_mud/mixins/fluids/definition"
 
 class LiquidFuelReqTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::Fluids::Definition
 
   belongs_to :light_source_template
@@ -16,4 +17,5 @@ class LiquidFuelReqTemplate < ApplicationRecord
       end
     end
   end
+
 end

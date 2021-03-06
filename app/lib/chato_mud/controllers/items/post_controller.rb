@@ -3,9 +3,13 @@ require "chato_mud/mixins/ink_types/utils"
 require "action_view/helpers"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class PostController
+
         include Mixins::Scripts::Utils
         include Mixins::InkTypes::Utils
         include ActionView::Helpers::DateHelper
@@ -100,7 +104,11 @@ module ChatoMud
         def model
           @post
         end
+
       end
+
     end
+
   end
+
 end

@@ -2,9 +2,13 @@ require "chato_mud/controllers/entities/entity_controller"
 require "chato_mud/controllers/characters/npc_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Entities
+
       class BotController < EntityController
+
         def initialize(server, character_controller)
           super(server, nil)
           @character_controller = character_controller
@@ -51,7 +55,11 @@ module ChatoMud
         def log(content)
           # Empty
         end
+
       end
+
     end
+
   end
+
 end

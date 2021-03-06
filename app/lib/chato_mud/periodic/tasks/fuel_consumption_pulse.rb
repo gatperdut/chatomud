@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Periodic
+
     module Tasks
+
       class FuelConsumptionPulse
+
         def initialize(server)
           @server = server
         end
@@ -11,7 +15,11 @@ module ChatoMud
             light_source_controller.light_source_controller.reduce_lifetime
           end
         end
+
       end
+
     end
+
   end
+
 end

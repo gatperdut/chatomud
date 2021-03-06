@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class UnlockDoor < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -25,6 +28,9 @@ module ChatoMud
         other_room_controller = room_controller.send("room_#{direction}")
         other_room_controller.emit_action_echo("unlock_door_other_side", { door: door_controller })
       end
+
     end
+
   end
+
 end

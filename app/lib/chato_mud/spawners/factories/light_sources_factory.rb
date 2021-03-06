@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class LightSourcesFactory
+
         def initialize(server)
           @server = server
         end
@@ -18,7 +22,11 @@ module ChatoMud
 
           light_source
         end
+
       end
+
     end
+
   end
+
 end

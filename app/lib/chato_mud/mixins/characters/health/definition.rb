@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Health
+
         module Definition
+
           def hits_accrue_goal
             {
               standing: 200,
@@ -29,8 +34,13 @@ module ChatoMud
               sleeping: 3
             }
           end
+
         end
+
       end
+
     end
+
   end
+
 end

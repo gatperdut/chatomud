@@ -1,4 +1,5 @@
 class FurnitureTemplate < ApplicationRecord
+
   has_one :inventory_template, as: :parent, dependent: :destroy, inverse_of: :parent
 
   has_many :furnitures, dependent: :destroy
@@ -12,4 +13,5 @@ class FurnitureTemplate < ApplicationRecord
   validates :code, uniqueness: true
 
   validates_associated :inventory_template
+
 end

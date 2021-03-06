@@ -1,10 +1,15 @@
 require "chato_mud/mixins/random/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Combat
+
         module Fleer
+
           include Mixins::Random::Utils
 
           def start_flee_thread
@@ -76,8 +81,13 @@ module ChatoMud
             handle_flee_success
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

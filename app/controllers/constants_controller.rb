@@ -15,6 +15,7 @@ require "chato_mud/mixins/fluids/definition"
 require "chato_mud/mixins/crafts/ingredients/definition"
 
 class ConstantsController < ApplicationController
+
   include ChatoMud::Mixins::Characters::SkillSet::Utils
 
   include ChatoMud::Mixins::Grips::Definition
@@ -95,4 +96,5 @@ class ConstantsController < ApplicationController
   def attributes
     render json: AttributeBonus.all
   end
+
 end

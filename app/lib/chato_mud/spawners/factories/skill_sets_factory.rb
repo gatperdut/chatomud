@@ -1,9 +1,13 @@
 require "chato_mud/mixins/characters/skill_set/definition"
 
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class SkillSetsFactory
+
         extend Mixins::Characters::SkillSet::Definition
 
         def initialize(server)
@@ -20,7 +24,11 @@ module ChatoMud
 
           skill_set
         end
+
       end
+
     end
+
   end
+
 end

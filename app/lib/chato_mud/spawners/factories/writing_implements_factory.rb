@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class WritingImplementsFactory
+
         def initialize(server)
           @server = server
         end
@@ -19,7 +23,11 @@ module ChatoMud
 
           writing_implement
         end
+
       end
+
     end
+
   end
+
 end

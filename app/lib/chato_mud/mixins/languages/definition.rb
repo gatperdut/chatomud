@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Languages
+
       module Definition
+
         def all_languages
           [
             :quenya,
@@ -16,7 +20,11 @@ module ChatoMud
             :black_speech
           ]
         end
+
       end
+
     end
+
   end
+
 end

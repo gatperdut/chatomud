@@ -1,4 +1,5 @@
 class CharacterTemplate < ApplicationRecord
+
   has_one :health_template, dependent: :destroy
 
   has_one :physical_attr_template, as: :parent, dependent: :destroy, inverse_of: :parent
@@ -24,4 +25,5 @@ class CharacterTemplate < ApplicationRecord
   validates :code, uniqueness: true
 
   validates_associated :health_template, :attribute_set_template, :skill_set_template, :inventory_template, :aasm_template, :choice_template, :physical_attr_template
+
 end

@@ -1,8 +1,11 @@
 require "chato_mud/controllers/rooms/superarea_controller"
 
 module ChatoMud
+
   module Handlers
+
     class SuperareasHandler
+
       def initialize(server)
         @server = server
         @superarea_controllers = []
@@ -39,6 +42,9 @@ module ChatoMud
           Controllers::Rooms::SuperareaController.new(@server, superarea)
         end
       end
+
     end
+
   end
+
 end

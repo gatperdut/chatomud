@@ -1,4 +1,5 @@
 class CreateTextInfos < ActiveRecord::Migration[6.1]
+
   def change
     create_table :text_infos do |t|
       t.references :parent,     null: false, index: true, polymorphic: true
@@ -15,6 +16,8 @@ class CreateTextInfos < ActiveRecord::Migration[6.1]
 
       t.integer    :script_skill_mod,   null: true
     end
+
+    add_foreign_key :text_infos, :characters, on_delete: :restrict
   end
 
 end

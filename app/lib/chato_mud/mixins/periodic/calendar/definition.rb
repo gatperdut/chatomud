@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Periodic
+
       module Calendar
+
         module Definition
+
           REFRESH_INTERVAL = 5 # Seconds.
 
           # Oxford, actually.
@@ -33,8 +38,13 @@ module ChatoMud
             "late afternoon",
             "dusk"
           ].freeze
+
         end
+
       end
+
     end
+
   end
+
 end

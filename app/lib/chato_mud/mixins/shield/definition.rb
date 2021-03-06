@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Shield
+
       module Definition
+
         def all_variants
           [
             :wall,
@@ -10,7 +14,11 @@ module ChatoMud
             :target
           ]
         end
+
       end
+
     end
+
   end
+
 end

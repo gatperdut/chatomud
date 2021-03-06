@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class HornPropertiesFactory
+
         def initialize(server)
           @server = server
         end
@@ -12,7 +16,11 @@ module ChatoMud
 
           horn_property
         end
+
       end
+
     end
+
   end
+
 end

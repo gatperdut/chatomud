@@ -1,4 +1,5 @@
 class CraftStep < ApplicationRecord
+
   has_one :craft_test, dependent: :destroy
 
   has_many :craft_item_results, dependent: :destroy
@@ -69,4 +70,5 @@ class CraftStep < ApplicationRecord
       errors.add(echo, "may not contain ingredient references") unless occurrence_indexes.length.zero?
     end
   end
+
 end

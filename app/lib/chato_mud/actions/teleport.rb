@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Teleport < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -50,6 +53,9 @@ module ChatoMud
           Actions::LookAround.new(@server, group_member, nil).exec
         end
       end
+
     end
+
   end
+
 end

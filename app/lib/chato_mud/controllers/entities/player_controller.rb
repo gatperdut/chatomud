@@ -6,9 +6,13 @@ require "chato_mud/controllers/characters/pc_controller"
 require "chato_mud/actions/look_around"
 
 module ChatoMud
+
   module Controllers
+
     module Entities
+
       class PlayerController < EntityController
+
         include Mixins::Players::Login
         include Mixins::Players::MainMenu
 
@@ -192,7 +196,7 @@ module ChatoMud
         end
 
         def log(content)
-          @logger&.info(content)
+          @logger&.info(content) if Rails.env.production?
         end
 
         private
@@ -231,10 +235,14 @@ module ChatoMud
         end
 
         def create_logger
-          @logger = ::Logger.new("log/#{Rails.env}/players/#{@player.nickname}.log")
+          @logger = ::Logger.new("log/players/#{@player.nickname}.log")
           @logger.level = 1
         end
+
       end
+
     end
+
   end
+
 end

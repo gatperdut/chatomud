@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class GetGround < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -37,6 +40,9 @@ module ChatoMud
       def echo(item_controller)
         room_controller.emit_action_echo("get_ground", { emitter: @character_controller, target: item_controller })
       end
+
     end
+
   end
+
 end

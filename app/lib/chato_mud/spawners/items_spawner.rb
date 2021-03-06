@@ -1,8 +1,11 @@
 require "chato_mud/controllers/items/item_controller"
 
 module ChatoMud
+
   module Spawners
+
     class ItemsSpawner
+
       def initialize(server)
         @server = server
       end
@@ -51,6 +54,9 @@ module ChatoMud
 
         item_controller
       end
+
     end
+
   end
+
 end

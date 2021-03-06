@@ -1,4 +1,5 @@
 class AmountTemplate < ApplicationRecord
+
   has_one :amount_data_template, dependent: :destroy
 
   belongs_to :stackable,   class_name: "ItemTemplate",        dependent: :destroy, optional: true
@@ -16,4 +17,5 @@ class AmountTemplate < ApplicationRecord
   validates :max, numericality: { greater_than_or_equal_to: 1 }
 
   validates_associated :amount_data_template
+
 end

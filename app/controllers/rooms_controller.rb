@@ -1,6 +1,7 @@
 require "chato_mud/mixins/directions/utils"
 
 class RoomsController < ApplicationController
+
   include ChatoMud::Mixins::Directions::Utils
 
   before_action :authenticate_player!
@@ -108,4 +109,5 @@ class RoomsController < ApplicationController
       :dr_id
     )
   end
+
 end

@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Combat
+
         module MeleeAssailant
+
           def start_switch_thread
             @switch_thread = Thread.new(self) do |combat_controller|
               sleep 5
@@ -117,8 +122,13 @@ module ChatoMud
           def target!(opponent_controller)
             @target = opponent_controller
           end
+
         end
+
       end
+
     end
+
   end
+
 end

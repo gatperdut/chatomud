@@ -2,12 +2,19 @@ require "chato_mud/mixins/characters/stats/combat/stances"
 require "chato_mud/mixins/characters/skill_set/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Stats
+
         module Combat
+
           module Melee
+
             module Offense
+
               include Mixins::Characters::Stats::Combat::Stances
               include Mixins::Characters::SkillSet::Utils
 
@@ -69,10 +76,17 @@ module ChatoMud
 
                 modifier
               end
+
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

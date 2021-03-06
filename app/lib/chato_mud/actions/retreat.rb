@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Retreat < BaseAction
+
       def exec
         return unless can_perform?([:unconscious, :sitting_or_resting, :not_in_combat])
 
@@ -20,6 +23,9 @@ module ChatoMud
 
         @character_controller.combat_controller.group_flee(direction)
       end
+
     end
+
   end
+
 end

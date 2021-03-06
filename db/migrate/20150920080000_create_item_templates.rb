@@ -1,4 +1,5 @@
 class CreateItemTemplates < ActiveRecord::Migration[6.1]
+
   def change
     create_table :item_templates do |t|
       t.string :short_desc, null: false
@@ -20,4 +21,5 @@ class CreateItemTemplates < ActiveRecord::Migration[6.1]
       t.string :possible_slots, null: false, array: true, default: [].to_yaml
     end
   end
+
 end

@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Controllers
+
     class LockController
+
       def initialize(lock)
         @lock = lock
       end
@@ -26,6 +29,9 @@ module ChatoMud
       def is_unlocked?
         !@lock.locked
       end
+
     end
+
   end
+
 end

@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Health
+
         module WoundManager
+
           def wounded?
             @wound_controllers.length.positive?
           end
@@ -28,8 +33,13 @@ module ChatoMud
               wound_controller.in_body_part?(body_part.to_sym) && [:indifferent, lodged_missile].include?(wound_controller.has_missile_lodged?)
             end
           end
+
         end
+
       end
+
     end
+
   end
+
 end

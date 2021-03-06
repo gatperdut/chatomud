@@ -1,11 +1,17 @@
 require "chato_mud/controllers/characters/aasm/types/common_aasm"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       module Aasm
+
         module Types
+
           class AggroAasm < CommonAasm
+
             aasm do
               # Empty.
             end
@@ -18,9 +24,15 @@ module ChatoMud
 
               attack(:attacking, target_controllers[0]) if target_controllers[0].present?
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

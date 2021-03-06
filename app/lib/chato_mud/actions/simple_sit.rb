@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SimpleSit < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -25,6 +28,9 @@ module ChatoMud
 
         raise "sitting with unknown position"
       end
+
     end
+
   end
+
 end

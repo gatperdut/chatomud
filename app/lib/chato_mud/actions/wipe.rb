@@ -1,8 +1,11 @@
 require "chato_mud/mixins/slots/definition"
 
 module ChatoMud
+
   module Actions
+
     class Wipe < BaseAction
+
       include Mixins::Slots::Definition
 
       def exec
@@ -29,6 +32,9 @@ module ChatoMud
 
         target_item_controller.writing_controller.wipe
       end
+
     end
+
   end
+
 end

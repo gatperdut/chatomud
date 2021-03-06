@@ -8,10 +8,15 @@ require "chato_mud/mixins/characters/health/wound_manager"
 require "chato_mud/mixins/damage/utils"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       module Health
+
         class HealthController
+
           include Mixins::Damage::Utils
           include Mixins::Characters::Health::HasHits
           include Mixins::Characters::Health::HasExhaustion
@@ -63,8 +68,13 @@ module ChatoMud
           def attribute_bonus_referrer
             @server.attribute_bonus_referrer
           end
+
         end
+
       end
+
     end
+
   end
+
 end

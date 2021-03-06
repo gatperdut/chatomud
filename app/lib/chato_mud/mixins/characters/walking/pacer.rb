@@ -2,10 +2,15 @@ require "chato_mud/mixins/characters/choices/paces/utils"
 require "chato_mud/mixins/characters/physical_attrs/height/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Walking
+
         module Pacer
+
           include Mixins::Characters::Choices::Paces::Utils
           include Mixins::Characters::PhysicalAttrs::Height::Utils
           include Mixins::Characters::Choices::Paces::Utils
@@ -51,8 +56,13 @@ module ChatoMud
 
             @character_controller.choice_controller.set_pace(new_pace)
           end
+
         end
+
       end
+
     end
+
   end
+
 end

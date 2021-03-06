@@ -1,8 +1,11 @@
 require "chato_mud/controllers/items/item_controller"
 
 module ChatoMud
+
   module Handlers
+
     class ItemsHandler
+
       attr_reader :light_source_controllers
 
       def initialize(server)
@@ -37,6 +40,9 @@ module ChatoMud
 
         @light_source_controllers << item_controller if item_controller.is_light_source?
       end
+
     end
+
   end
+
 end

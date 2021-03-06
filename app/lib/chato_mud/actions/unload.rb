@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Unload < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -42,6 +45,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("unload", { emitter: @character_controller, ranged_weapon: wielded_ranged_weapon_controller, missile: missile_controller, destination: quiver_controller })
       end
+
     end
+
   end
+
 end

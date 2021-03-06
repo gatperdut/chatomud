@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class RangedStatsFactory
+
         def initialize(server)
           @server = server
         end
@@ -14,7 +18,11 @@ module ChatoMud
 
           ranged_stat
         end
+
       end
+
     end
+
   end
+
 end

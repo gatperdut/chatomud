@@ -1,4 +1,5 @@
 class LightSourceTemplate < ApplicationRecord
+
   belongs_to :item_template
 
   has_one :capacity, class_name: "AmountTemplate", foreign_key: "fuelable_id", dependent: :destroy
@@ -51,4 +52,5 @@ class LightSourceTemplate < ApplicationRecord
   def must_be_lit_if_eternal
     errors.add(:lit, " must be true if the light is eternal") if !lit && is_eternal?
   end
+
 end

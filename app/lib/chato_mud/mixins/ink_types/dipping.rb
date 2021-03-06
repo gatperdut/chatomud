@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module InkTypes
+
       module Dipping
+
         def take_one(character_controller)
           use_up_charge
 
@@ -11,7 +15,11 @@ module ChatoMud
 
           @server.items_spawner.spawn_item(model.spawned_item_template, attributes, nil, character_controller.inventory_controller)
         end
+
       end
+
     end
+
   end
+
 end

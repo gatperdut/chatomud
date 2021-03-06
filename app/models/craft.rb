@@ -1,4 +1,5 @@
 class Craft < ApplicationRecord
+
   has_many :craft_steps, dependent: :destroy
 
   has_many :craft_ingredients, dependent: :destroy
@@ -35,4 +36,5 @@ class Craft < ApplicationRecord
       errors.add(:craft_ingredients, "appears a total of #{ingredient_appearance} times in the echoes instead of once") unless ingredient_appearance == 1
     end
   end
+
 end

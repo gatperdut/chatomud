@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class CloseItem < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -38,6 +41,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("close_item", { emitter: @character_controller, target: item_controller })
       end
+
     end
+
   end
+
 end

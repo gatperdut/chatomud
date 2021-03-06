@@ -1,4 +1,5 @@
 class CreateFurnitures < ActiveRecord::Migration[6.1]
+
   def change
     create_table :furnitures do |t|
       t.string :short_desc, null: false
@@ -12,5 +13,8 @@ class CreateFurnitures < ActiveRecord::Migration[6.1]
 
       t.references :furniture_template, null: false, index: true
     end
+
+    add_foreign_key :furnitures, :rooms, on_delete: :restrict
   end
+
 end

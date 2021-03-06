@@ -1,4 +1,3 @@
-require "grammar/support"
 require "spec_helper"
 
 RSpec.describe ChatoMud::Grammar::Parser do

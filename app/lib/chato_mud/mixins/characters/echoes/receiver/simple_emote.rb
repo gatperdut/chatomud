@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module SimpleEmote
+
             def recv_simple_emote(params)
               emitter = params[:emitter]
               emote   = params[:emote]
@@ -13,9 +19,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

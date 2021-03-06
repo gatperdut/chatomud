@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Drink < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -36,6 +39,9 @@ module ChatoMud
 
         @character_controller.nourishment_controller.replenish_nourishment(nourishment[:calories], nourishment[:hydration])
       end
+
     end
+
   end
+
 end

@@ -3,9 +3,13 @@ require "chato_mud/controllers/items/melee_stat_controller"
 require "chato_mud/controllers/items/ranged_stat_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class WeaponStatController
+
         include Mixins::Characters::SkillSet::Utils
 
         attr_reader :melee_stat_controller
@@ -64,7 +68,11 @@ module ChatoMud
         def critical_mod
           @weapon_stat.critical_mod
         end
+
       end
+
     end
+
   end
+
 end

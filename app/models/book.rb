@@ -1,4 +1,5 @@
 class Book < ApplicationRecord
+
   belongs_to :item
 
   has_many :posts, as: :parent, dependent: :destroy, inverse_of: :parent
@@ -113,4 +114,5 @@ class Book < ApplicationRecord
   def current_page_is_zero_if_closed
     errors.add(:current_page, "must be 0 if the book is closed") if is_closed? && !current_page.zero?
   end
+
 end

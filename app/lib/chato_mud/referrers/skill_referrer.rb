@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Referrers
+
     class SkillReferrer
+
       def initialize
         @entries = Skill.all.to_a
       end
@@ -16,6 +19,9 @@ module ChatoMud
           entry.skill_category.to_sym == skill_category
         end
       end
+
     end
+
   end
+
 end

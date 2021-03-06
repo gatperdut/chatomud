@@ -2,10 +2,15 @@ require "chato_mud/mixins/characters/combat/roll_attack"
 require "chato_mud/mixins/random/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Combat
+
         module RangedDamageTaker
+
           include Mixins::Characters::Combat::RollAttack
           include Mixins::Random::Utils
 
@@ -44,8 +49,13 @@ module ChatoMud
 
             health_controller.check_liveness
           end
+
         end
+
       end
+
     end
+
   end
+
 end

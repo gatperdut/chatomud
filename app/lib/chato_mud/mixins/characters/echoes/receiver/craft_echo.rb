@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module CraftEcho
+
             def recv_craft_echo(params)
               emitter     = params[:emitter]
               text_self   = params[:text_self]
@@ -15,9 +21,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

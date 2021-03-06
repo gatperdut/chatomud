@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Load < BaseAction
+
       def exec
         return unless can_perform?([:unconscious, :sitting_or_resting, :in_combat])
 
@@ -48,6 +51,9 @@ module ChatoMud
         @character_controller.load_controller.start_load_thread(missile_controller, from)
         room_controller.emit_action_echo("load", { emitter: @character_controller, missile: missile_controller, from: from })
       end
+
     end
+
   end
+
 end

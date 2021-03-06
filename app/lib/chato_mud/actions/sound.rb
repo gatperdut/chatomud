@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Sound < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -22,6 +25,9 @@ module ChatoMud
 
         controller.broadcast_echo(item_controller.horn_property_controller.echo)
       end
+
     end
+
   end
+
 end

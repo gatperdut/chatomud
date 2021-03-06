@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class VisibilityController
+
         attr_reader :visible
 
         def initialize(server, character_controller)
@@ -21,7 +25,11 @@ module ChatoMud
         def turn(value)
           @visible = value
         end
+
       end
+
     end
+
   end
+
 end

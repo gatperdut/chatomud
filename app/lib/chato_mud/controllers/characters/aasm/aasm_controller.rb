@@ -2,10 +2,15 @@ require "chato_mud/controllers/characters/aasm/types/aggro_aasm"
 require "chato_mud/controllers/characters/aasm/types/wanderer_aasm"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       module Aasm
+
         class AasmController
+
           attr_reader :character_controller
           attr_reader :aasm_handle
 
@@ -36,8 +41,13 @@ module ChatoMud
             @aasm.update(active: false) unless @aasm.active == false
             @aasm_handle.calmdown if @aasm_handle.may_calmdown?
           end
+
         end
+
       end
+
     end
+
   end
+
 end

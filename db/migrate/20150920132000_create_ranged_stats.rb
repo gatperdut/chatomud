@@ -1,4 +1,5 @@
 class CreateRangedStats < ActiveRecord::Migration[6.1]
+
   def change
     create_table :ranged_stats do |t|
       t.references :weapon_stat, index: true
@@ -9,5 +10,8 @@ class CreateRangedStats < ActiveRecord::Migration[6.1]
 
       t.boolean :can_remain_loaded, default: false, null: false
     end
+
+    add_foreign_key :ranged_stats, :weapon_stats, on_delete: :cascade
   end
+
 end

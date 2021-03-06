@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SimpleTell < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -13,6 +16,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("simple_tell", { emitter: @character_controller, target: target_controller, speech: speech })
       end
+
     end
+
   end
+
 end

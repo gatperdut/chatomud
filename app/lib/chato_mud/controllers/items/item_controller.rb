@@ -28,9 +28,13 @@ require "chato_mud/mixins/describable/item"
 require "chato_mud/mixins/instantiable/item"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class ItemController < BaseController
+
         attr_reader :inventory_controller
         attr_reader :containing_inventory_controller
         attr_reader :horn_property_controller
@@ -254,7 +258,11 @@ module ChatoMud
         def model
           @item
         end
+
       end
+
     end
+
   end
+
 end

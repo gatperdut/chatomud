@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class OpenDoor < BaseAction
+
       def exec
         return unless can_perform?([:unconscious, :sitting_or_resting])
 
@@ -22,6 +25,9 @@ module ChatoMud
         room_controller.emit_action_echo("open_door", { emitter: @character_controller, target: door_controller, direction: direction })
         room_controller.send("room_#{direction}").emit_action_echo("open_door_other_side", { door: door_controller })
       end
+
     end
+
   end
+
 end

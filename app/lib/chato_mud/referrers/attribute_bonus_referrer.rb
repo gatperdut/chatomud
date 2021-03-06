@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Referrers
+
     class AttributeBonusReferrer
+
       def initialize
         @entries = AttributeBonus.all.reverse
       end
@@ -13,6 +16,9 @@ module ChatoMud
           previous = entry
         end
       end
+
     end
+
   end
+
 end

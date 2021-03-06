@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class FinishLoading < BaseAction
+
       def exec
         missile_controller = @params[:missile]
         from = @params[:from]
@@ -24,6 +27,9 @@ module ChatoMud
 
         @character_controller.load_controller.done_loading
       end
+
     end
+
   end
+
 end

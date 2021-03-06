@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module WritingImplements
+
           def check_writing_implement_is_single_use(writing_implement_controller, message = nil)
             unless writing_implement_controller.is_single_use?
               tx(message) if message
@@ -50,8 +55,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

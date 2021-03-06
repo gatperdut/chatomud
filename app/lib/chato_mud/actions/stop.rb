@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Stop < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -25,6 +28,9 @@ module ChatoMud
 
         tx("You are not performing any specific activity.")
       end
+
     end
+
   end
+
 end

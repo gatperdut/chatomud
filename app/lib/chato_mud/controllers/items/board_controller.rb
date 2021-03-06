@@ -1,9 +1,13 @@
 require "chato_mud/controllers/items/posts_holder_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class BoardController < PostsHolderController
+
         PAGE_SIZE = 10
 
         def initialize(server, item_controller, board)
@@ -75,7 +79,11 @@ module ChatoMud
 
           add_post_controller(post)
         end
+
       end
+
     end
+
   end
+
 end

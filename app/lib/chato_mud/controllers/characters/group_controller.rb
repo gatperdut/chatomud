@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class GroupController
+
         attr_reader :following
 
         def initialize(server, character_controller)
@@ -126,7 +130,11 @@ module ChatoMud
             follower.group_controller.stop_following
           end
         end
+
       end
+
     end
+
   end
+
 end

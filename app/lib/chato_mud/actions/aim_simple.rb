@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class AimSimple < BaseAction
+
       def exec
         return unless can_perform?([:unconscious, :sitting_or_resting, :in_combat])
 
@@ -28,6 +31,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("aim_simple", { emitter: @character_controller, target_info: target_info })
       end
+
     end
+
   end
+
 end

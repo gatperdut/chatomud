@@ -2,6 +2,7 @@ require "chato_mud/mixins/body_parts/definition"
 require "chato_mud/mixins/armor/definition"
 
 class ArmorStatTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::BodyParts::Definition
   extend ChatoMud::Mixins::Armor::Definition
 
@@ -24,4 +25,5 @@ class ArmorStatTemplate < ApplicationRecord
       end
     end
   end
+
 end

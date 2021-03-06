@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Handlers
+
     class FurnituresHandler
+
       def initialize(server)
         @server = server
         @furniture_controllers = []
@@ -28,6 +31,9 @@ module ChatoMud
       def find(id)
         @furniture_controllers.select { |furniture_controller| furniture_controller.id == id }[0]
       end
+
     end
+
   end
+
 end

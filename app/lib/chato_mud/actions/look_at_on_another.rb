@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class LookAtOnAnother < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -19,6 +22,9 @@ module ChatoMud
 
         tx("#{target_controller.short_desc} (#{target_controller.location(@character_controller)}):\n#{target_controller.full_desc}")
       end
+
     end
+
   end
+
 end

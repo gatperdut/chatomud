@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Armor
+
       module Definition
+
         def all_maneuver_impediments
           [
             :lowest_mi, #   1/8 head or single upper limb
@@ -20,7 +24,11 @@ module ChatoMud
             :high_rai    # 4/8 hands
           ]
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class InkSourcesFactory
+
         def initialize(server)
           @server = server
         end
@@ -13,7 +17,11 @@ module ChatoMud
 
           ink_source
         end
+
       end
+
     end
+
   end
+
 end

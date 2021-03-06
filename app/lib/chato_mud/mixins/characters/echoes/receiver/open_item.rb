@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module OpenItem
+
             def recv_open_item(params)
               emitter   = params[:emitter]
               target    = params[:target]
@@ -20,9 +26,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

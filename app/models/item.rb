@@ -1,6 +1,7 @@
 require "chato_mud/mixins/slots/definition"
 
 class Item < ApplicationRecord
+
   include ChatoMud::Mixins::Slots::Definition
 
   extend ChatoMud::Mixins::Slots::Definition
@@ -254,4 +255,5 @@ class Item < ApplicationRecord
 
     errors.add(:food, "amount_data:hydration must be set if amount_data is inside food") if food.amount_data.hydration.nil?
   end
+
 end

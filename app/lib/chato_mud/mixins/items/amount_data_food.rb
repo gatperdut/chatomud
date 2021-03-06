@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Items
+
       module AmountDataFood
+
         def calories_per_stack_unit
           model.amount_data.calories
         end
@@ -24,7 +28,11 @@ module ChatoMud
             hydration: hydration_per_unit * amount
           }
         end
+
       end
+
     end
+
   end
+
 end

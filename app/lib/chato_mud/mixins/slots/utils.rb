@@ -2,9 +2,13 @@ require "chato_mud/mixins/slots/definition"
 require "chato_mud/mixins/characters/physical_attrs/genders/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Slots
+
       module Utils
+
         extend Definition
 
         include Characters::PhysicalAttrs::Genders::Utils
@@ -54,7 +58,11 @@ module ChatoMud
               raise "unknown wearloc '#{slot}'"
           end
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Crafts
+
       module Ingredients
+
         module Definition
+
           def all_craft_ingredient_locations
             [
               :in_room,
@@ -16,8 +21,13 @@ module ChatoMud
               :reusable
             ]
           end
+
         end
+
       end
+
     end
+
   end
+
 end

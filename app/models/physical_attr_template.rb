@@ -4,6 +4,7 @@ require "chato_mud/mixins/characters/physical_attrs/height/definition"
 require "chato_mud/mixins/characters/physical_attrs/weight/definition"
 
 class PhysicalAttrTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::Characters::PhysicalAttrs::Genders::Definition
   extend ChatoMud::Mixins::Characters::PhysicalAttrs::Races::Definition
   extend ChatoMud::Mixins::Characters::PhysicalAttrs::Height::Definition
@@ -38,4 +39,5 @@ class PhysicalAttrTemplate < ApplicationRecord
 
     errors.add(:genders, "must contain a single gender for character applications") unless genders.count == 1
   end
+
 end

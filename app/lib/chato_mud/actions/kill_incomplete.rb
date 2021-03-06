@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class KillIncomplete < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -12,6 +15,9 @@ module ChatoMud
 
         tx("Please spell the full command, 'kill'.")
       end
+
     end
+
   end
+
 end

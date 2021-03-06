@@ -1,4 +1,5 @@
 class Door < ApplicationRecord
+
   has_one :nr,  class_name: "Room", foreign_key: "sd_id"
 
   has_one :er,  class_name: "Room", foreign_key: "wd_id"
@@ -61,4 +62,5 @@ class Door < ApplicationRecord
 
     errors.add(:base, "there is a door already present between the two rooms") if counter.positive?
   end
+
 end

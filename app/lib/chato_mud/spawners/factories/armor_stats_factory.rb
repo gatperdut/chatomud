@@ -1,9 +1,13 @@
 require "chato_mud/mixins/armor/definition"
 
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class ArmorStatsFactory
+
         include Mixins::Armor::Definition
 
         def initialize(server)
@@ -25,7 +29,11 @@ module ChatoMud
 
           armor_stat
         end
+
       end
+
     end
+
   end
+
 end

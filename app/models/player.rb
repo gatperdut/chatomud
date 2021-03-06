@@ -1,7 +1,8 @@
-# frozen_string_literal: true
-
 class Player < ActiveRecord::Base
-  extend Devise::Models 
+
+  before_validation :generate_setting, on: [:create]
+
+  extend Devise::Models
 
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable, :trackable and :omniauthable
@@ -31,6 +32,10 @@ class Player < ActiveRecord::Base
   end
 
   private
+
+  def generate_setting
+    self.setting = Setting.new(ansi_coloring: true)
+  end
 
   def max_one_active_character
     return unless characters.select(&:active).count > 1

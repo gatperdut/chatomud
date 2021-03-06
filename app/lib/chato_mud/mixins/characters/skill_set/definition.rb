@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module SkillSet
+
         module Definition
+
           def all_skill_labels
             [
               :unskilled,
@@ -133,8 +138,13 @@ module ChatoMud
               :metalworking
             ]
           end
+
         end
+
       end
+
     end
+
   end
+
 end

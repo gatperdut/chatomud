@@ -1,6 +1,7 @@
 require "chato_mud/mixins/crafts/ingredients/definition"
 
 class CraftIngredient < ApplicationRecord
+
   extend ChatoMud::Mixins::Crafts::Ingredients::Definition
 
   belongs_to :craft
@@ -24,4 +25,5 @@ class CraftIngredient < ApplicationRecord
       errors.add(:item_template_codes, "contains non-existing item template code '#{itc}'") unless ItemTemplate.find_by_code(itc).present?
     end
   end
+
 end

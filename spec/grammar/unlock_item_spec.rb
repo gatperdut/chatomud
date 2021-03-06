@@ -1,4 +1,3 @@
-require "grammar/support"
 require "spec_helper"
 
 RSpec.describe ChatoMud::Grammar::Parser do
@@ -12,7 +11,7 @@ RSpec.describe ChatoMud::Grammar::Parser do
     context "unlock_item" do
       it "can parse" do
         queries.each do |query|
-          expect(JSON.parse(parser.parse(query[0]).to_json)).to eq(query[1])
+          expect(parser.parse(query[0])).to eq(query[1])
         end
       end
     end

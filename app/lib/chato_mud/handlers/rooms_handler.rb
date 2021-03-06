@@ -1,8 +1,11 @@
 require "chato_mud/controllers/rooms/room_controller"
 
 module ChatoMud
+
   module Handlers
+
     class RoomsHandler
+
       def initialize(server)
         @server = server
         @room_controllers = []
@@ -55,6 +58,9 @@ module ChatoMud
           room_controller.emit_echo(nil, text)
         end
       end
+
     end
+
   end
+
 end

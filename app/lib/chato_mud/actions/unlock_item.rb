@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class UnlockItem < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -26,6 +29,9 @@ module ChatoMud
         item_controller.inventory_controller.lid_controller.lock_controller.unlock
         room_controller.emit_action_echo("unlock_item", { emitter: @character_controller, target: item_controller, with: lockers[0] })
       end
+
     end
+
   end
+
 end

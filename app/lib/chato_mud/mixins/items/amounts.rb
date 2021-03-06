@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Items
+
       module Amounts
+
         def current
           model.current
         end
@@ -55,7 +59,11 @@ module ChatoMud
 
           amount / model.max.to_f
         end
+
       end
+
     end
+
   end
+
 end

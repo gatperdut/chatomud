@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Set < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -29,6 +32,9 @@ module ChatoMud
 
         tx(text)
       end
+
     end
+
   end
+
 end

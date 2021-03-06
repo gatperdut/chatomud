@@ -1,4 +1,5 @@
 class Inventory < ApplicationRecord
+
   has_one :lid, dependent: :destroy
 
   belongs_to :parent, polymorphic: true
@@ -44,4 +45,5 @@ class Inventory < ApplicationRecord
   def sheaths_ranged_weapons_and_quivers_cannot_have_lids
     errors.add(:lid, "sheaths and quivers cannot have lids") if lid && belongs_to_item? && (parent.is_sheath || parent.is_quiver || parent.is_ranged_weapon?)
   end
+
 end

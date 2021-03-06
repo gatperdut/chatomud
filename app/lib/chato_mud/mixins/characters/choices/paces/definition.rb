@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Choices
+
         module Paces
+
           module Definition
+
             def all_paces
               [
                 :crawl,
@@ -14,9 +20,15 @@ module ChatoMud
                 :dash
               ]
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

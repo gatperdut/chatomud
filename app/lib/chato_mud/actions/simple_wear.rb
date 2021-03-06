@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SimpleWear < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -33,6 +36,9 @@ module ChatoMud
         item_controller.set_slot(slot, true)
         room_controller.emit_action_echo("wear", { emitter: @character_controller, target: item_controller, slot: slot })
       end
+
     end
+
   end
+
 end

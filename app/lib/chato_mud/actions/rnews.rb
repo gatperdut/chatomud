@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Rnews < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -17,6 +20,9 @@ module ChatoMud
 
         tx("\n#{item_controller.board_controller.show(index)}\n")
       end
+
     end
+
   end
+
 end

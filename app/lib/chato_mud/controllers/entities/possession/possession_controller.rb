@@ -1,9 +1,13 @@
 require "chato_mud/mixins/characters/physical_attrs/genders/utils"
 
 module ChatoMud
+
   module Controllers
+
     module Entities
+
       class PossessionController
+
         attr_reader :possessed_controller
         attr_reader :possessing_controller
         attr_reader :quietly
@@ -109,7 +113,11 @@ module ChatoMud
 
           be_released(:vessel_death)
         end
+
       end
+
     end
+
   end
+
 end

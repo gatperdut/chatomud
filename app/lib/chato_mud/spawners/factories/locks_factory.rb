@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class LocksFactory
+
         def initialize(server)
           @server = server
         end
@@ -13,7 +17,11 @@ module ChatoMud
 
           lock
         end
+
       end
+
     end
+
   end
+
 end

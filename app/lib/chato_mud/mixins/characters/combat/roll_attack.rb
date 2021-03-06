@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Combat
+
         module RollAttack
+
           def roll_attack(offensive_capability, defensive_capability, body_part)
             roll  = d100
 
@@ -26,8 +31,13 @@ module ChatoMud
 
             attack
           end
+
         end
+
       end
+
     end
+
   end
+
 end

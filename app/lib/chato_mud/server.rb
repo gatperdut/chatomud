@@ -61,7 +61,9 @@ require "chato_mud/periodic/timer"
 require "chato_mud/cm_socket"
 
 module ChatoMud
+
   class Server
+
     # TODO: group handlers, spawners, factories, outfitters & referrers separately under
     # handlers_assistant, spawners_assistant, etc.
     attr_reader :superareas_handler
@@ -260,5 +262,7 @@ module ChatoMud
     def initialize_arena
       @arena_master = Arena::ArenaMaster.new(self)
     end
+
   end
+
 end

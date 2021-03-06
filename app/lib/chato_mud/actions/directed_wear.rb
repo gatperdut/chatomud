@@ -2,8 +2,11 @@ require "chato_mud/mixins/slots/definition"
 require "chato_mud/mixins/slots/utils"
 
 module ChatoMud
+
   module Actions
+
     class DirectedWear < BaseAction
+
       include Mixins::Slots::Utils
 
       extend Mixins::Slots::Definition
@@ -47,6 +50,9 @@ module ChatoMud
         item_controller.set_slot(slot, true)
         room_controller.emit_action_echo("wear", { emitter: @character_controller, target: item_controller, slot: slot })
       end
+
     end
+
   end
+
 end

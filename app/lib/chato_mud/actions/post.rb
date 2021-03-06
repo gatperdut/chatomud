@@ -1,8 +1,11 @@
 require "chato_mud/mixins/slots/definition"
 
 module ChatoMud
+
   module Actions
+
     class Post < BaseAction
+
       include Mixins::Slots::Definition
 
       def exec
@@ -23,6 +26,9 @@ module ChatoMud
 
         item_controller.board_controller.post(@character_controller, speech)
       end
+
     end
+
   end
+
 end

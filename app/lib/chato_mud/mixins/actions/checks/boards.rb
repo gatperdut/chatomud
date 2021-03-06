@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Boards
+
           def check_board_page_is_within_bounds(board_controller, page, message = nil)
             unless page <= board_controller.page_count
               tx(message) if message
@@ -26,8 +31,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

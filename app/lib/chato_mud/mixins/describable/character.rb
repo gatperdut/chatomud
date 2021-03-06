@@ -2,9 +2,13 @@ require "chato_mud/mixins/describable/common"
 require "chato_mud/mixins/characters/physical_attrs/genders/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Describable
+
       module Character
+
         include Common
         include Characters::PhysicalAttrs::Genders::Utils
 
@@ -92,7 +96,11 @@ module ChatoMud
         def editing_flag
           @entity_controller.is_editing? ? " <editing>".red : ""
         end
+
       end
+
     end
+
   end
+
 end

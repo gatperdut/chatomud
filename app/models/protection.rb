@@ -1,4 +1,5 @@
 class Protection < ApplicationRecord
+
   validates :level, uniqueness: true, numericality: { only_integer: true, less_than_or_equal_to: 20, greater_than_or_equal_to: 1 }
 
   validates :level, :min_penalty, :max_penalty, presence: true
@@ -18,4 +19,5 @@ class Protection < ApplicationRecord
   def penalty_range_is_lower_than_or_equal_to_50
     errors.add(:base, "max_penalty - min_penalty must be 50 or less") if max_penalty - min_penalty > 50
   end
+
 end

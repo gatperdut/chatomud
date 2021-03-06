@@ -1,4 +1,5 @@
 class Room < ApplicationRecord
+
   before_validation :set_default_associations, on: :create
 
   before_destroy :check_no_characters
@@ -101,4 +102,5 @@ class Room < ApplicationRecord
   def set_default_associations
     self.inventory = Inventory.new
   end
+
 end

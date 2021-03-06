@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class EmotedTell < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -14,6 +17,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("emoted_tell", { emitter: @character_controller, target: target_controller, emote: emote, speech: speech })
       end
+
     end
+
   end
+
 end

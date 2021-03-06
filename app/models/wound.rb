@@ -2,6 +2,7 @@ require "chato_mud/mixins/body_parts/definition"
 require "chato_mud/mixins/damage/definition"
 
 class Wound < ApplicationRecord
+
   extend ChatoMud::Mixins::BodyParts::Definition
   extend ChatoMud::Mixins::Damage::Definition
 
@@ -36,4 +37,5 @@ class Wound < ApplicationRecord
 
     errors.add(:inventory, "wound inventories can only hold one missile")
   end
+
 end

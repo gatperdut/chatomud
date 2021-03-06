@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module RangedAttack
+
             def recv_ranged_attack(params)
               @target       = params[:target]
               attack        = params[:attack]
@@ -36,9 +42,15 @@ module ChatoMud
               text << "It lodges in "
               text << interpolate_me_other(@target, "your #{@body_part}.", "#{possessive(@target.physical_attr_controller.gender)} #{simple_body_part_description(@body_part)}.")
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SimpleSheathe < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -29,6 +32,9 @@ module ChatoMud
         sheath_controller.inventory_controller.accept_item(target_controller, true)
         room_controller.emit_action_echo("sheathe", { emitter: @character_controller, target: target_controller, sheath: sheath_controller })
       end
+
     end
+
   end
+
 end

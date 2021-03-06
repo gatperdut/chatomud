@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Controllers
+
     class BaseController
+
       def initialize(server)
         @server = server
       end
@@ -20,6 +23,9 @@ module ChatoMud
       def is_room_controller?
         self.class <= Rooms::RoomController
       end
+
     end
+
   end
+
 end

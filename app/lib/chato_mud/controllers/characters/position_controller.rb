@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class PositionController
+
         attr_reader :position
         attr_reader :character_controller
         attr_reader :furniture_controller
@@ -81,7 +85,11 @@ module ChatoMud
         def handle_in_combat
           @character_controller.combat_controller.stop_combat(false, true) if @character_controller.combat_controller.is_attacking?
         end
+
       end
+
     end
+
   end
+
 end

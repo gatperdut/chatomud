@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class SolidFuelReqController
+
         def initialize(server, light_source_controller, solid_fuel_req)
           @server = server
           @light_source_controller = light_source_controller
@@ -17,7 +21,11 @@ module ChatoMud
         def option_ids
           @solid_fuel_req.options.pluck(:id)
         end
+
       end
+
     end
+
   end
+
 end

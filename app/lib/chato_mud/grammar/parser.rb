@@ -1,8 +1,11 @@
 require "parslet"
 
 module ChatoMud
+
   module Grammar
+
     class Parser < Parslet::Parser
+
       # Alphanumerical & Spaces
       rule(:spaces)  { match('\s').repeat(1) }
       rule(:spaces?) { spaces.maybe }
@@ -1307,6 +1310,9 @@ module ChatoMud
       rule(:die_c) do
         str("die")
       end
+
     end
+
   end
+
 end

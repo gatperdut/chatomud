@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module BodyParts
+
       module Utils
+
         def simple_body_part_description(body_part)
           case body_part.to_sym
             when :head
@@ -82,7 +86,11 @@ module ChatoMud
         def body_part_description(body_part)
           "the #{simple_body_part_description(body_part)}"
         end
+
       end
+
     end
+
   end
+
 end

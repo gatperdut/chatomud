@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class EmptyOnGround < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -23,6 +26,9 @@ module ChatoMud
         room_controller.emit_action_echo("empty_on_ground", { emitter: @character_controller, target: item_controller })
         item_controller.inventory_controller.dump_items_into(room_controller)
       end
+
     end
+
   end
+
 end

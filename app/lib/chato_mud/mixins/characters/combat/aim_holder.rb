@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Combat
+
         module AimHolder
+
           def update_aim(reason, data)
             send("update_aim_#{reason}", data)
           end
@@ -58,8 +63,13 @@ module ChatoMud
           def update_aim_gone(data)
             @character_controller.room_controller.emit_action_echo("cease_aiming", { emitter: @character_controller, reason: :gone, data: data })
           end
+
         end
+
       end
+
     end
+
   end
+
 end

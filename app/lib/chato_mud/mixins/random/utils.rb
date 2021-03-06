@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Random
+
       module Utils
+
         # Possible values are:
         # :high_open_ended => can explode into the positives.
         # :low_open_ended  => can explode into the negatives.
@@ -35,7 +39,11 @@ module ChatoMud
 
           roll
         end
+
       end
+
     end
+
   end
+
 end

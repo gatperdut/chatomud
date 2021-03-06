@@ -1,6 +1,7 @@
 require "chato_mud/mixins/characters/skill_set/definition"
 
 class SkillSetTemplate < ApplicationRecord
+
   include ChatoMud::Mixins::Characters::SkillSet::Definition
 
   belongs_to :character_template
@@ -20,4 +21,5 @@ class SkillSetTemplate < ApplicationRecord
       errors.add(:chosen, "invalid choice '#{choice}'") unless all_skills.include?(choice)
     end
   end
+
 end

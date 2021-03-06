@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module Finder
+
           def find_held_item_controller(kword)
             find_item_controller_internal(kword, held_item_controllers)
           end
@@ -42,8 +47,13 @@ module ChatoMud
           def lockers_for(lock_controller)
             lock_controller.lockers & held_item_controllers.map(&:model)
           end
+
         end
+
       end
+
     end
+
   end
+
 end

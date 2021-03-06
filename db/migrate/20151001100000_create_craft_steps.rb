@@ -12,6 +12,8 @@ class CreateCraftSteps < ActiveRecord::Migration[6.1]
 
       t.integer :delay, null: false
     end
+
+    add_foreign_key :craft_steps, :crafts, on_delete: :cascade
   end
 
 end

@@ -2,10 +2,15 @@ require "chato_mud/mixins/periodic/calendar/definition"
 require "sun_times"
 
 module ChatoMud
+
   module Mixins
+
     module Periodic
+
       module Calendar
+
         module Utils
+
           include Periodic::Calendar::Definition
 
           def day_period_change_echo(old_data, new_data)
@@ -209,8 +214,13 @@ module ChatoMud
                 raise "invalid year day"
             end
           end
+
         end
+
       end
+
     end
+
   end
+
 end

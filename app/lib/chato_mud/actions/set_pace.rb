@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SetPace < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -18,6 +21,9 @@ module ChatoMud
         @character_controller.choice_controller.pace!(pace)
         tx("From now on you will #{@character_controller.choice_controller.pace_colorized}.")
       end
+
     end
+
   end
+
 end

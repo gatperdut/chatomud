@@ -1,6 +1,7 @@
 require "chato_mud/mixins/characters/gifts/definition"
 
 class Character < ApplicationRecord
+
   extend ChatoMud::Mixins::Characters::Gifts::Definition
 
   before_validation :set_default_associations, on: :create
@@ -101,4 +102,5 @@ class Character < ApplicationRecord
     self.skill_set     = SkillSet.new      unless skill_set.present?
     self.choice        = Choice.new        unless choice.present?
   end
+
 end

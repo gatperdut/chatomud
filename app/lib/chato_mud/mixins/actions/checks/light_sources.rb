@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module LightSources
+
           def check_is_valid_liquid_fuel(liquid_fuel_req_controller, fluid, message = nil)
             unless liquid_fuel_req_controller.is_valid_fuel?(fluid)
               tx(message) if message
@@ -82,8 +87,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -3,6 +3,7 @@ require "chato_mud/mixins/characters/physical_attrs/races/definition"
 require "chato_mud/mixins/characters/physical_attrs/weight/definition"
 
 class FrameModifier < ApplicationRecord
+
   extend ChatoMud::Mixins::Characters::PhysicalAttrs::Genders::Definition
   extend ChatoMud::Mixins::Characters::PhysicalAttrs::Races::Definition
   extend ChatoMud::Mixins::Characters::PhysicalAttrs::Weight::Definition
@@ -18,4 +19,5 @@ class FrameModifier < ApplicationRecord
   validates :score_limit, :race, :gender, :label, :modifier, presence: true
 
   validates :score_limit, numericality: { only_integer: true, less_than_or_equal_to: 100, greater_than_or_equal_to: 1 }
+
 end

@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module OpenDoorOtherSide
+
             def recv_open_door_other_side(params)
               door_controller = params[:door]
 
@@ -11,9 +17,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

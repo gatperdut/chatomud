@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class SpasmsController
+
         def initialize(server, character_controller)
           @server = server
           @character_controller = character_controller
@@ -12,7 +16,11 @@ module ChatoMud
 
           @character_controller.inventory_controller.drop_carried_items
         end
+
       end
+
     end
+
   end
+
 end

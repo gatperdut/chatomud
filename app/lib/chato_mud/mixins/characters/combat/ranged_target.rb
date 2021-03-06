@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Combat
+
         module RangedTarget
+
           def is_being_aimed_at?
             @aimers.present?
           end
@@ -32,8 +37,13 @@ module ChatoMud
 
             :dodge
           end
+
         end
+
       end
+
     end
+
   end
+
 end

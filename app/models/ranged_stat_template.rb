@@ -2,6 +2,7 @@ require "chato_mud/mixins/missile/definition"
 require "chato_mud/mixins/ranges/definition"
 
 class RangedStatTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::Missile::Definition
 
   extend ChatoMud::Mixins::Ranges::Definition
@@ -31,4 +32,5 @@ class RangedStatTemplate < ApplicationRecord
       errors.add(:ranges_suitability, "#{range} is not present") unless ranges_suitability.map(&:to_sym).include?(range.to_sym)
     end
   end
+
 end

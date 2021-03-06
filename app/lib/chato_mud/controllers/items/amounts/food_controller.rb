@@ -2,10 +2,15 @@ require "chato_mud/mixins/items/amounts"
 require "chato_mud/mixins/items/amount_data_food"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       module Amounts
+
         class FoodController
+
           include Mixins::Items::Amounts
           include Mixins::Items::AmountDataFood
 
@@ -63,8 +68,13 @@ module ChatoMud
           def model
             @food
           end
+
         end
+
       end
+
     end
+
   end
+
 end

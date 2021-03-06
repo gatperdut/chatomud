@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SpawnItem < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -22,6 +25,9 @@ module ChatoMud
         item_controller = @server.items_spawner.spawn_item(item_template, {}, item_outfitter.item_template_codes, @character_controller.room_controller.inventory_controller)
         tx("Spawned #{item_controller.short_desc} and outfitted with '#{item_outfitter_code}'.")
       end
+
     end
+
   end
+
 end

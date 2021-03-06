@@ -1,4 +1,5 @@
 class InventoryTemplate < ApplicationRecord
+
   has_one :lid_template, dependent: :destroy
 
   has_one :inventory_template, as: :parent, dependent: :destroy, inverse_of: :parent
@@ -34,4 +35,5 @@ class InventoryTemplate < ApplicationRecord
   def sheaths_and_quivers_cannot_have_lids
     errors.add(:lid_template, "sheaths and quivers cannot have lids") if lid_template && belongs_to_item_template? && (parent.is_sheath || parent.is_quiver)
   end
+
 end

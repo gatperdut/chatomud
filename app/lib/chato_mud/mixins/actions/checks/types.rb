@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Types
+
           def check_is_weapon(item_controller, message = nil)
             unless item_controller.is_weapon?
               tx(message) if message
@@ -124,8 +129,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

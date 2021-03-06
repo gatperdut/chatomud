@@ -4,9 +4,13 @@ require "chato_mud/mixins/describable/closable"
 require "chato_mud/mixins/slots/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Describable
+
       module Furniture
+
         include Common
         include Closable
         include Slots::Utils
@@ -26,7 +30,11 @@ module ChatoMud
 
           text
         end
+
       end
+
     end
+
   end
+
 end

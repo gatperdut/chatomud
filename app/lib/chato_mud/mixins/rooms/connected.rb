@@ -2,9 +2,13 @@ require "chato_mud/mixins/directions/definition"
 require "chato_mud/mixins/directions/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Rooms
+
       module Connected
+
         extend  Directions::Definition
         include Directions::Definition
         include Directions::Utils
@@ -142,7 +146,11 @@ module ChatoMud
 
           text
         end
+
       end
+
     end
+
   end
+
 end

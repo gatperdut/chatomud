@@ -1,4 +1,5 @@
 class CreateFurnitureTemplates < ActiveRecord::Migration[6.1]
+
   def change
     create_table :furniture_templates do |t|
       t.string :short_desc, null: false
@@ -11,4 +12,5 @@ class CreateFurnitureTemplates < ActiveRecord::Migration[6.1]
       t.integer :max_seats, null: false, default: 0
     end
   end
+
 end

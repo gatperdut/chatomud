@@ -1,7 +1,7 @@
 class CreateCharacterTemplates < ActiveRecord::Migration[6.1]
+
   def change
     create_table :character_templates do |t|
-
       t.string :short_desc, null: false
       t.string :long_desc,  null: false
       t.text   :full_desc,  null: false
@@ -14,4 +14,5 @@ class CreateCharacterTemplates < ActiveRecord::Migration[6.1]
       t.string :long_desc_endings, null: false, array: true
     end
   end
+
 end

@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Referrers
+
     class ProtectionReferrer
+
       def initialize
         @entries = Protection.all.to_a
       end
@@ -12,6 +15,9 @@ module ChatoMud
           entry.level >= level
         end
       end
+
     end
+
   end
+
 end

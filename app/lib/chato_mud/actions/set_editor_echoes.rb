@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SetEditorEchoes < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -19,6 +22,9 @@ module ChatoMud
 
         tx("You #{@character_controller.choice_controller.editor_echoes_colorized} receive echoes of your input during editing from now on.")
       end
+
     end
+
   end
+
 end

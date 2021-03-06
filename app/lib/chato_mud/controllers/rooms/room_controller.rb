@@ -10,9 +10,13 @@ require "chato_mud/mixins/rooms/furnitures_container"
 require "chato_mud/mixins/rooms/echoes/emitter"
 
 module ChatoMud
+
   module Controllers
+
     module Rooms
+
       class RoomController < BaseController
+
         attr_reader :inventory_controller
 
         include Mixins::Rooms::Showable
@@ -77,7 +81,11 @@ module ChatoMud
         def model
           @room
         end
+
       end
+
     end
+
   end
+
 end

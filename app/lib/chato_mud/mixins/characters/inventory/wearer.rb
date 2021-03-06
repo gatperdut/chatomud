@@ -1,10 +1,15 @@
 require "chato_mud/mixins/slots/definition"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module Wearer
+
           extend Slots::Definition
 
           def worn_item_controllers
@@ -40,8 +45,13 @@ module ChatoMud
             end
             item_controllers
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class WritingController
+
         attr_reader :post_controller
 
         def initialize(server, item_controller, writing)
@@ -68,7 +72,11 @@ module ChatoMud
 
           data[:writing_implement_controller].discharge
         end
+
       end
+
     end
+
   end
+
 end

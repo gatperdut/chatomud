@@ -1,9 +1,13 @@
 require "chato_mud/mixins/fluids/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Items
+
       module Weightable
+
         include Mixins::Fluids::Utils
 
         def is_dead_weight?
@@ -53,7 +57,11 @@ module ChatoMud
         def inventory_weight
           @inventory_controller.borne_weight
         end
+
       end
+
     end
+
   end
+
 end

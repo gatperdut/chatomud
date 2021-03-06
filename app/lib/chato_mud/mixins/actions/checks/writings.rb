@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Writings
+
           def check_writing_is_blank(writing_controller, message = nil)
             if writing_controller.post_controller.has_content?
               tx(message) if message
@@ -34,8 +39,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Ranges
+
       module Definition
+
         def all_ranges
           [
             :point_blank,
@@ -10,7 +14,11 @@ module ChatoMud
             :long_range
           ]
         end
+
       end
+
     end
+
   end
+
 end

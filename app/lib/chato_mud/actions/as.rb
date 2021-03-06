@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class As < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -22,6 +25,9 @@ module ChatoMud
 
         tx("\nSomething is wrong with that command. Try POSSESS.\n") unless result
       end
+
     end
+
   end
+
 end

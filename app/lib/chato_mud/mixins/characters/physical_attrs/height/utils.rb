@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module PhysicalAttrs
+
         module Height
+
           module Utils
+
             def height_travel_time_multiplier(height)
               case height
                 when -Float::INFINITY..69
@@ -34,9 +40,15 @@ module ChatoMud
                   0.6
               end
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

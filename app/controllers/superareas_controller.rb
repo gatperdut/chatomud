@@ -1,4 +1,5 @@
 class SuperareasController < ApplicationController
+
   before_action :authenticate_player!
 
   before_action :set_superarea, only: [
@@ -82,4 +83,5 @@ class SuperareasController < ApplicationController
       ]
     )
   end
+
 end

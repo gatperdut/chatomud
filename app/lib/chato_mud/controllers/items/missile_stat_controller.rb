@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class MissileStatController
+
         def initialize(server, item_controller, missile_stat)
           @server = server
           @item_controller = item_controller
@@ -19,7 +23,11 @@ module ChatoMud
         def is_missile_type?(another_missile_type)
           missile_type == another_missile_type
         end
+
       end
+
     end
+
   end
+
 end

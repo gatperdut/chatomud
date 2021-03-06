@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Fuel < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -33,6 +36,9 @@ module ChatoMud
         end
         target_item_controller.light_source_controller.capacity_controller.add(1)
       end
+
     end
+
   end
+
 end

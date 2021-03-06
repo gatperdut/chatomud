@@ -3,8 +3,11 @@ require_all "app/lib/chato_mud/mixins/actions/**/*.rb"
 require "chato_mud/mixins/characters/physical_attrs/genders/utils"
 
 module ChatoMud
+
   module Actions
+
     class BaseAction
+
       include Mixins::Actions::Checks::Amounts
       include Mixins::Actions::Checks::Boards
       include Mixins::Actions::Checks::Characters
@@ -150,6 +153,9 @@ module ChatoMud
 
         was_aiming
       end
+
     end
+
   end
+
 end

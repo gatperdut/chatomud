@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Spawners
+
     class CharactersSpawner
+
       def initialize(server)
         @server = server
         @stopwords_filter = Stopwords::Snowball::Filter.new "en"
@@ -52,6 +55,9 @@ module ChatoMud
           kwords: kwords
         }
       end
+
     end
+
   end
+
 end

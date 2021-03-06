@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module FleeOutcome
+
             def recv_flee_outcome(params)
               emitter = params[:emitter]
               outcome = params[:outcome]
@@ -18,9 +24,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

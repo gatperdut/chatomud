@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Choices
+
         module Stances
+
           module Utils
+
             def offensive_percentage_for(stance)
               case stance
                 when :pacifist
@@ -45,9 +51,15 @@ module ChatoMud
                   raise "Unknown stance '#{stance}'"
               end
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

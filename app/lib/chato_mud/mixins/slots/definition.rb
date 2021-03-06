@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Slots
+
       module Definition
+
         def all_slots
           regular_slots + hand_slots + [:void]
         end
@@ -38,7 +42,11 @@ module ChatoMud
             lhand: :rhand
           }
         end
+
       end
+
     end
+
   end
+
 end

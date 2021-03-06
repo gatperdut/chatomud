@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module SheathUser
+
           # :any, :empty, :full
           def sheath_item_controllers(where)
             send("sheath_item_controllers_#{where}")
@@ -25,8 +30,13 @@ module ChatoMud
               item_controller.inventory_controller.has_content?
             end
           end
+
         end
+
       end
+
     end
+
   end
+
 end

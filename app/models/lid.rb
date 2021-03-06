@@ -1,4 +1,5 @@
 class Lid < ApplicationRecord
+
   has_one :lock, as: :parent, dependent: :destroy, inverse_of: :parent
 
   belongs_to :inventory
@@ -28,4 +29,5 @@ class Lid < ApplicationRecord
   def can_be_locked_only_when_closed
     errors.add(:lock, "can only be locked when lid is closed") if has_lock? && lock.locked && open
   end
+
 end

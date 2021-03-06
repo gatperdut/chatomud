@@ -1,6 +1,7 @@
 require "chato_mud/mixins/reaches/definition"
 
 class HornPropertyTemplate < ApplicationRecord
+
   extend ChatoMud::Mixins::Reaches::Definition
 
   belongs_to :item_template
@@ -8,4 +9,5 @@ class HornPropertyTemplate < ApplicationRecord
   enum reach: all_reaches
 
   validates :item_template, :echo, :reach, :action_echo_self, :action_echo_others, presence: true
+
 end

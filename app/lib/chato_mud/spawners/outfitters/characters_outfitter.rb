@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Outfitters
+
       class CharactersOutfitter
+
         def initialize(server)
           @server = server
         end
@@ -24,7 +28,11 @@ module ChatoMud
             item_controller.set_slot(wloc_key, true)
           end
         end
+
       end
+
     end
+
   end
+
 end

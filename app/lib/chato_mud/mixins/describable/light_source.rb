@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Describable
+
       module LightSource
+
         def lifetime_left_approximation
           case lifetime_left
             when 1..300
@@ -21,7 +25,11 @@ module ChatoMud
 
           "it requires fuel"
         end
+
       end
+
     end
+
   end
+
 end

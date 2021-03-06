@@ -1,8 +1,11 @@
 require "facets/string/margin"
 
 module ChatoMud
+
   module Actions
+
     class Scan < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -33,6 +36,9 @@ module ChatoMud
 
         tx(text)
       end
+
     end
+
   end
+
 end

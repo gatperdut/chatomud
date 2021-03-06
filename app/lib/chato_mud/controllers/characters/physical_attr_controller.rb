@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class PhysicalAttrController
+
         def initialize(server, character_controller, physical_attr)
           @server = server
           @character_controller = character_controller
@@ -37,7 +41,11 @@ module ChatoMud
         def round_to_multiple(number, multiple_of)
           (number / multiple_of.to_f).round * multiple_of
         end
+
       end
+
     end
+
   end
+
 end

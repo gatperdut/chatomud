@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Comms
+
         module Guesser
+
           def guess_spoken_language(speaker_controller)
             return @character_controller.choice_controller.language.humanize.titlecase.blue if can_guess_spoken_language?(speaker_controller)
 
@@ -36,8 +41,13 @@ module ChatoMud
           def can_guess_script?(script)
             @character_controller.stats_controller.knows_skill?(script.to_sym)
           end
+
         end
+
       end
+
     end
+
   end
+
 end

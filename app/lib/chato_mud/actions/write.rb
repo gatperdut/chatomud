@@ -1,8 +1,11 @@
 require "chato_mud/mixins/slots/definition"
 
 module ChatoMud
+
   module Actions
+
     class Write < BaseAction
+
       include Mixins::Slots::Definition
 
       def exec
@@ -57,6 +60,9 @@ module ChatoMud
 
         target_item_controller.book_controller.write(@character_controller, source_item_controller.writing_implement_controller) if target_item_controller.is_book?
       end
+
     end
+
   end
+
 end

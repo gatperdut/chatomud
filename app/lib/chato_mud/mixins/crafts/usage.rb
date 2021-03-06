@@ -1,9 +1,13 @@
 require "chato_mud/mixins/actions/helpers/items"
 
 module ChatoMud
+
   module Mixins
+
     module Crafts
+
       module Usage
+
         include Mixins::Actions::Helpers::Items
 
         # @ingredients =
@@ -50,7 +54,11 @@ module ChatoMud
 
         def handle_usage_type_reusable(ingredient)
         end
+
       end
+
     end
+
   end
+
 end

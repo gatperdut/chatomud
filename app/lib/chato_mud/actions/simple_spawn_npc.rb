@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class SimpleSpawnNpc < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -15,6 +18,9 @@ module ChatoMud
         character_controller = @server.characters_spawner.spawn_npc(npc_template, nil, @character_controller.room_controller, { gladiator: false })
         tx("Spawned #{character_controller.short_desc}.")
       end
+
     end
+
   end
+
 end

@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module PourInto
+
             def recv_pour_into(params)
               emitter = params[:emitter]
               source  = params[:source]
@@ -24,9 +30,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

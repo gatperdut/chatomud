@@ -1,4 +1,5 @@
 class AreasController < ApplicationController
+
   before_action :authenticate_player!
 
   before_action :set_area, only: [
@@ -93,4 +94,5 @@ class AreasController < ApplicationController
       ]
     )
   end
+
 end

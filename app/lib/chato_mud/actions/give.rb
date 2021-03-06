@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Give < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -45,6 +48,9 @@ module ChatoMud
       def echo(receiver_character_controller, item_controller)
         room_controller.emit_action_echo("give", { emitter: @character_controller, receiver: receiver_character_controller, target: item_controller })
       end
+
     end
+
   end
+
 end

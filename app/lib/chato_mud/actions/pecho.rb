@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Pecho < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -24,6 +27,9 @@ module ChatoMud
 
         tx("#{character_controller.short_desc} receives:\n\n#{speech}\n")
       end
+
     end
+
   end
+
 end

@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module MissilePassing
+
             def recv_missile_passing(params)
               direction = params[:direction]
               missile   = params[:missile]
@@ -14,9 +20,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Scripts
+
       module Utils
+
         def script_description(text_info, character_controller)
           return "utterly" unless character_controller.stats_controller.knows_skill?(text_info.script)
 
@@ -22,7 +26,11 @@ module ChatoMud
               "perfect"
           end
         end
+
       end
+
     end
+
   end
+
 end

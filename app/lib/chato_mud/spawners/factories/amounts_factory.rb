@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class AmountsFactory
+
         def initialize(server)
           @server = server
         end
@@ -15,7 +19,11 @@ module ChatoMud
 
           amount
         end
+
       end
+
     end
+
   end
+
 end

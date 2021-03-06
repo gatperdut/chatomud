@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module MorphSputter
+
             def recv_morph_sputter(params)
               emitter   = params[:emitter]
               location  = params[:location]
@@ -30,9 +36,15 @@ module ChatoMud
 
             def recv_morph_sputter_room
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

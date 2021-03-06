@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module SpasmDropAll
+
             def recv_spasm_drop_all(params)
               emitter = params[:emitter]
               items   = params[:items]
@@ -22,9 +28,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

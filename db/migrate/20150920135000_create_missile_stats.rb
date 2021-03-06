@@ -1,4 +1,5 @@
 class CreateMissileStats < ActiveRecord::Migration[6.1]
+
   def change
     create_table :missile_stats do |t|
       t.references :item, index: true
@@ -6,4 +7,5 @@ class CreateMissileStats < ActiveRecord::Migration[6.1]
       t.integer :missile_type, null: false, default: 0
     end
   end
+
 end

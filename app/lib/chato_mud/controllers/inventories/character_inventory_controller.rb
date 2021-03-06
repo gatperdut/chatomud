@@ -21,9 +21,13 @@ require "chato_mud/mixins/body_parts/definition"
 require "chato_mud/mixins/slots/utils"
 
 module ChatoMud
+
   module Controllers
+
     module Inventories
+
       class CharacterInventoryController < InventoryController
+
         extend Mixins::Slots::Definition
         extend Mixins::BodyParts::Definition
 
@@ -72,7 +76,11 @@ module ChatoMud
           end
           text
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Rooms
+
       module FurnituresContainer
+
         def add_furniture_controller(furniture_controller)
           @furniture_controllers << furniture_controller
         end
@@ -64,7 +68,11 @@ module ChatoMud
           end
           text
         end
+
       end
+
     end
+
   end
+
 end

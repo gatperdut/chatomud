@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class BasicAttributesFactory
+
         def initialize(server)
           @server = server
         end
@@ -11,7 +15,11 @@ module ChatoMud
 
           basic_attributes
         end
+
       end
+
     end
+
   end
+
 end

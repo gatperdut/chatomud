@@ -1,12 +1,17 @@
 require "chato_mud/mixins/characters/health/definition"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Health
+
         include Mixins::Characters::Health::Definition
 
         module HasHits
+
           def max_hits
             50 + (stats_controller.skill_modifier(:body_development) / 2.0).round
           end
@@ -71,8 +76,13 @@ module ChatoMud
             max = @character_controller.stats_controller.con_max_hits_healed_per_pulse
             rand(1..max)
           end
+
         end
+
       end
+
     end
+
   end
+
 end

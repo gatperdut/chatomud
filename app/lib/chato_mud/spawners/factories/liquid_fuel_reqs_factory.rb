@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class LiquidFuelReqsFactory
+
         def initialize(server)
           @server = server
         end
@@ -13,7 +17,11 @@ module ChatoMud
 
           liquid_fuel_req
         end
+
       end
+
     end
+
   end
+
 end

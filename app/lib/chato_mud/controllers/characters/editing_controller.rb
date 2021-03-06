@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class EditingController
+
         def initialize(server, character_controller)
           @server = server
           @character_controller = character_controller
@@ -64,7 +68,11 @@ module ChatoMud
 
           @character_controller.tx("You stop editing. Something requires your immediate attention!".red)
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,8 +1,11 @@
 require "chato_mud/mixins/directions/utils"
 
 module ChatoMud
+
   module Actions
+
     class Fire < BaseAction
+
       include Mixins::Directions::Utils
 
       def exec
@@ -20,6 +23,9 @@ module ChatoMud
 
         @character_controller.aim_controller.done_aiming
       end
+
     end
+
   end
+
 end

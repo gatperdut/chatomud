@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class ChoiceController
+
         def initialize(server, choice)
           @server = server
           @choice = choice
@@ -75,7 +79,11 @@ module ChatoMud
         def script_formatted
           @choice.script.humanize.titlecase.blue
         end
+
       end
+
     end
+
   end
+
 end

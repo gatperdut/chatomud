@@ -1,8 +1,11 @@
 require "chato_mud/controllers/rooms/door_controller"
 
 module ChatoMud
+
   module Handlers
+
     class DoorsHandler
+
       def initialize(server)
         @server = server
         @door_controllers = []
@@ -36,6 +39,9 @@ module ChatoMud
       def find(id)
         @door_controllers.select { |door_controller| door_controller.id == id }[0]
       end
+
     end
+
   end
+
 end

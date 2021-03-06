@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Referrers
+
     class RankReferrer
+
       attr_reader :limited
       attr_reader :below_average
       attr_reader :standard
@@ -22,6 +25,9 @@ module ChatoMud
           entry.value >= value
         end
       end
+
     end
+
   end
+
 end

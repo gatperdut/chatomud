@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Referrers
+
     class BaseFrameReferrer
+
       def find(roll, race)
         roll = roll.clamp(-191, 320)
 
@@ -10,6 +13,9 @@ module ChatoMud
       def find_by_column(race, column)
         BaseFrame.where(race: race, column: column).first
       end
+
     end
+
   end
+
 end

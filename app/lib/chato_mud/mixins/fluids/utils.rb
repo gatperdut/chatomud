@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Fluids
+
       module Utils
+
         def fluid_weight_per_unit(fluid)
           case fluid.to_sym
             when :water
@@ -42,7 +46,11 @@ module ChatoMud
               raise "Invalid fluid when determining fluid calories per unit"
           end
         end
+
       end
+
     end
+
   end
+
 end

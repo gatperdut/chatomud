@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class DropAll < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -16,6 +19,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("drop_all", { emitter: @character_controller, items: item_controllers })
       end
+
     end
+
   end
+
 end

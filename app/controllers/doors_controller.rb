@@ -1,4 +1,5 @@
 class DoorsController < ApplicationController
+
   before_action :authenticate_player!
 
   before_action :set_door, only: [
@@ -76,4 +77,5 @@ class DoorsController < ApplicationController
       :see_through
     )
   end
+
 end

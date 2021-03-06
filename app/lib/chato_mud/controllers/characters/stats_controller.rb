@@ -17,9 +17,13 @@ require "chato_mud/mixins/armor/definition"
 require "chato_mud/mixins/armor/utils"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class StatsController
+
         extend Mixins::Characters::AttributeSet::Definition
         extend Mixins::Characters::SkillSet::Definition
         extend Mixins::Armor::Definition
@@ -92,7 +96,11 @@ module ChatoMud
         def protection_referrer
           @server.protection_referrer
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Direction < BaseAction
+
       def exec
         return unless can_perform?([:unconscious, :sitting_or_resting, :in_combat])
 
@@ -71,6 +74,9 @@ module ChatoMud
         end
         character_controller.walking_controller.start_walking(direction, false)
       end
+
     end
+
   end
+
 end

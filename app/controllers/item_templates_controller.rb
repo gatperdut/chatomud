@@ -1,4 +1,5 @@
 class ItemTemplatesController < ApplicationController
+
   before_action :authenticate_player!
 
   before_action :set_item_template, only: [
@@ -177,4 +178,5 @@ class ItemTemplatesController < ApplicationController
       ]
     )
   end
+
 end

@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module RangedWeaponWielder
+
           # where [:held, :wielded, :held_or_wielded]
           # loaded [true, false, :indifferent]
           def ranged_weapon_controllers(where, loaded)
@@ -34,8 +39,13 @@ module ChatoMud
 
             ranged_weapon_controller.weapon_stat_controller.ranged_stat_controller.inventory_controller.is_loaded? == loaded
           end
+
         end
+
       end
+
     end
+
   end
+
 end

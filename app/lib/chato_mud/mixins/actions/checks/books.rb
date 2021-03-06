@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Books
+
           def check_book_is_open(book_controller, message = nil)
             unless book_controller.is_open?
               tx(message) if message
@@ -82,8 +87,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

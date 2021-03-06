@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class LookAt < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -34,6 +37,9 @@ module ChatoMud
             raise "Unknown controller class when doing 'look at'."
         end
       end
+
     end
+
   end
+
 end

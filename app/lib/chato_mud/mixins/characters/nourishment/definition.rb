@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Nourishment
+
         module Definition
+
           def all_hunger_stages
             [
               "almost starved to death",
@@ -62,8 +67,13 @@ module ChatoMud
               0
             ]
           end
+
         end
+
       end
+
     end
+
   end
+
 end

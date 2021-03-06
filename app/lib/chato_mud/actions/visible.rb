@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Visible < BaseAction
+
       def exec
         if @character_controller.visibility_controller.is_visible?
           tx("You are already visible ...")
@@ -11,6 +14,9 @@ module ChatoMud
 
         tx("You make yourself visible.")
       end
+
     end
+
   end
+
 end

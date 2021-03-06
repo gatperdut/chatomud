@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module DislodgeSimple
+
             def recv_dislodge_simple(params)
               emitter   = params[:emitter]
               body_part = params[:body_part]
@@ -17,9 +23,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

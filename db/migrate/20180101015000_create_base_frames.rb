@@ -1,9 +1,7 @@
 class CreateBaseFrames < ActiveRecord::Migration[6.1]
 
   def change
-
     create_table :base_frames do |t|
-
       t.integer :race, null: false, default: 0
 
       t.integer :score_limit, null: false, default: 0
@@ -15,9 +13,7 @@ class CreateBaseFrames < ActiveRecord::Migration[6.1]
       t.integer :label, null: false, default: 0
 
       t.integer :column, null: false, default: 0
-
     end
-
   end
 
 end

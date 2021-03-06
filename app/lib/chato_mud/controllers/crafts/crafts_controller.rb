@@ -1,9 +1,13 @@
 require "chato_mud/mixins/crafts/step"
 
 module ChatoMud
+
   module Controllers
+
     module Crafts
+
       class CraftsController
+
         include ChatoMud::Mixins::Crafts::Step
 
         def initialize(server, character_controller)
@@ -100,7 +104,11 @@ module ChatoMud
           end
           text
         end
+
       end
+
     end
+
   end
+
 end

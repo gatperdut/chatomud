@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Invisible < BaseAction
+
       def exec
         if @character_controller.visibility_controller.is_invisible?
           tx("You are already invisible.")
@@ -11,6 +14,9 @@ module ChatoMud
 
         tx("You make yourself invisible.")
       end
+
     end
+
   end
+
 end

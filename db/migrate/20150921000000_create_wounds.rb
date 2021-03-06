@@ -1,4 +1,5 @@
 class CreateWounds < ActiveRecord::Migration[6.1]
+
   def change
     create_table :wounds do |t|
       t.integer :damage, null: false
@@ -9,5 +10,8 @@ class CreateWounds < ActiveRecord::Migration[6.1]
 
       t.references :health, null: false, index: true
     end
+
+    add_foreign_key :wounds, :healths, on_delete: :cascade
   end
+
 end

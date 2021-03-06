@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Inventory
+
         module MissileUser
+
           # :held, :stowed
           def missile_controllers(where, missile_type)
             send("missile_controllers_#{where}", missile_type)
@@ -23,8 +28,13 @@ module ChatoMud
             end
             result.flatten!
           end
+
         end
+
       end
+
     end
+
   end
+
 end

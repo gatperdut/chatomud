@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Outfitters
+
       class ItemsOutfitter
+
         def initialize(server)
           @server = server
         end
@@ -23,7 +27,11 @@ module ChatoMud
             end
           end
         end
+
       end
+
     end
+
   end
+
 end

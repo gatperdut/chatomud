@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Mudstats < BaseAction
+
       def exec
         text =  @server.superareas_handler.report
         text << @server.areas_handler.report
@@ -11,6 +14,9 @@ module ChatoMud
         text << @server.characters_handler.report
         tx(text)
       end
+
     end
+
   end
+
 end

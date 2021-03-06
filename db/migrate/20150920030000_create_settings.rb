@@ -6,6 +6,8 @@ class CreateSettings < ActiveRecord::Migration[6.1]
 
       t.references :player, null: false, index: true
     end
+
+    add_foreign_key :settings, :players, on_delete: :cascade
   end
 
 end

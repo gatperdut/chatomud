@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module InkSources
+
           def check_ink_source_is_picking(ink_source_controller, message = nil)
             unless ink_source_controller.is_picking_ink_source?
               tx(message) if message
@@ -26,8 +31,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

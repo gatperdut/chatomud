@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2018_01_01_016000) do
 
   create_table "aasms", force: :cascade do |t|
     t.integer "code", default: 0, null: false
-    t.boolean "active", default: true, null: false
     t.integer "character_id"
+    t.boolean "active", default: true, null: false
     t.index ["character_id"], name: "index_aasms_on_character_id"
   end
 

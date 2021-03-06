@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+
   before_action :set_item, only: [:show, :destroy]
 
   def show
@@ -101,4 +102,5 @@ class ItemsController < ApplicationController
       ]
     )
   end
+
 end

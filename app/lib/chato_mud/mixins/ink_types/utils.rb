@@ -1,9 +1,13 @@
 require "chato_mud/mixins/ink_types/definition"
 
 module ChatoMud
+
   module Mixins
+
     module InkTypes
+
       module Utils
+
         include Mixins::InkTypes::Definition
 
         def is_dipping_ink_type?(ink_type)
@@ -34,7 +38,11 @@ module ChatoMud
         def ink_type_name_for(ink_type)
           ink_type.split("_").join(" ").humanize(capitalize: false).send(ink_type_color(ink_type))
         end
+
       end
+
     end
+
   end
+
 end

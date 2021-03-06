@@ -2,9 +2,13 @@ require "chato_mud/mixins/directions/utils"
 require "chato_mud/mixins/characters/combat/aim_holder"
 
 module ChatoMud
+
   module Controllers
+
     module Characters
+
       class AimController
+
         include Mixins::Directions::Utils
         include Mixins::Characters::Combat::AimHolder
 
@@ -78,7 +82,11 @@ module ChatoMud
           @aim_thread.terminate
           @aim_stage = :not_aiming
         end
+
       end
+
     end
+
   end
+
 end

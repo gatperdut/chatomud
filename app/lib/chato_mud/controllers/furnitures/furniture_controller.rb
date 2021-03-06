@@ -4,9 +4,13 @@ require "chato_mud/mixins/describable/furniture"
 require "chato_mud/mixins/furnitures/accommodator"
 
 module ChatoMud
+
   module Controllers
+
     module Furnitures
+
       class FurnitureController < BaseController
+
         include Mixins::Describable::Furniture
         include Mixins::Furnitures::Accommodator
 
@@ -42,7 +46,11 @@ module ChatoMud
         def id
           model.id
         end
+
       end
+
     end
+
   end
+
 end

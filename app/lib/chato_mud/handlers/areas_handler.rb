@@ -1,8 +1,11 @@
 require "chato_mud/controllers/rooms/area_controller"
 
 module ChatoMud
+
   module Handlers
+
     class AreasHandler
+
       def initialize(server)
         @server = server
         @area_controllers = []
@@ -39,6 +42,9 @@ module ChatoMud
           Controllers::Rooms::AreaController.new(@server, area)
         end
       end
+
     end
+
   end
+
 end

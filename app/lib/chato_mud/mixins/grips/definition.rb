@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Grips
+
       module Definition
+
         def all_grips
           [
             :one_handed,
@@ -9,7 +13,11 @@ module ChatoMud
             :both
           ]
         end
+
       end
+
     end
+
   end
+
 end

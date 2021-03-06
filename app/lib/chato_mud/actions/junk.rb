@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Junk < BaseAction
+
       # TODO: add amount
       def exec
         return unless can_perform?([:unconscious])
@@ -19,6 +22,9 @@ module ChatoMud
 
         item_controller.junk(true)
       end
+
     end
+
   end
+
 end

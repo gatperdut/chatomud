@@ -3,10 +3,15 @@ require "chato_mud/mixins/characters/choices/paces/utils"
 require "chato_mud/mixins/characters/choices/stances/definition"
 
 module ChatoMud
+
   module Mixins
+
     module Actions
+
       module Checks
+
         module Set
+
           include Mixins::Characters::Choices::Paces::Definition
           include Mixins::Characters::Choices::Paces::Utils
           include Mixins::Characters::Choices::Stances::Definition
@@ -42,8 +47,13 @@ module ChatoMud
             end
             true
           end
+
         end
+
       end
+
     end
+
   end
+
 end

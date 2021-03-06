@@ -1,11 +1,17 @@
 require "chato_mud/mixins/characters/choices/paces/definition"
 
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Choices
+
         module Paces
+
           module Utils
+
             include Mixins::Characters::Choices::Paces::Definition
 
             def pace_travel_time_multiplier(pace)
@@ -73,9 +79,15 @@ module ChatoMud
                   all_paces.first(1)
               end
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

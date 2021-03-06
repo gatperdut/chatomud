@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Mixins
+
     module Closable
+
       def open
         model.open = true
         model.save!
@@ -18,6 +21,9 @@ module ChatoMud
       def is_closed?
         !is_open?
       end
+
     end
+
   end
+
 end

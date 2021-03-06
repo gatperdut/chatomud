@@ -37,7 +37,6 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.text :tokens
 
       t.timestamps
-
     end
 
     add_index :players, :email,                unique: true

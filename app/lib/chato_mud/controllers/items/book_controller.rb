@@ -3,9 +3,13 @@ require "chato_mud/mixins/scripts/utils"
 require "chato_mud/controllers/items/posts_holder_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Items
+
       class BookController < PostsHolderController
+
         include Mixins::Items::Book
         include Mixins::Scripts::Utils
 
@@ -150,7 +154,11 @@ module ChatoMud
 
           data[:writing_implement_controller].discharge
         end
+
       end
+
     end
+
   end
+
 end

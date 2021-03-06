@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class Snoop < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -33,6 +36,9 @@ module ChatoMud
 
         @character_controller.entity_controller.possession_controller.possess(character_controller.entity_controller, true)
       end
+
     end
+
   end
+
 end

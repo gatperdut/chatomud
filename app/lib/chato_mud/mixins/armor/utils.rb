@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Mixins
+
     module Armor
+
       module Utils
+
         def maneuver_impediment_factor_for(maneuver_impediment)
           case maneuver_impediment
             when :lowest_mi
@@ -33,7 +37,11 @@ module ChatoMud
               raise "ranged impediment factor for unknown ranged impediment"
           end
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,9 +1,13 @@
 require "chato_mud/controllers/base_controller"
 
 module ChatoMud
+
   module Controllers
+
     module Rooms
+
       class AreaController < BaseController
+
         def initialize(server, area)
           super(server)
           @area = area
@@ -35,7 +39,11 @@ module ChatoMud
         def name
           @area.name
         end
+
       end
+
     end
+
   end
+
 end

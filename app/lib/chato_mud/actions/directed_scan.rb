@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class DirectedScan < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -27,6 +30,9 @@ module ChatoMud
 
         tx(text)
       end
+
     end
+
   end
+
 end

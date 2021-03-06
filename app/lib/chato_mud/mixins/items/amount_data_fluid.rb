@@ -2,9 +2,13 @@ require "chato_mud/mixins/fluids/definition"
 require "chato_mud/mixins/fluids/utils"
 
 module ChatoMud
+
   module Mixins
+
     module Items
+
       module AmountDataFluid
+
         include Fluids::Definition
         include Fluids::Utils
 
@@ -23,7 +27,11 @@ module ChatoMud
             hydration: fluid_hydration_per_unit(fluid) * amount
           }
         end
+
       end
+
     end
+
   end
+
 end

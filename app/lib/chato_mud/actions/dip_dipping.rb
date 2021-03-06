@@ -1,6 +1,9 @@
 module ChatoMud
+
   module Actions
+
     class DipDipping < BaseAction
+
       def exec
         return unless can_perform?([:unconscious])
 
@@ -31,6 +34,9 @@ module ChatoMud
 
         room_controller.emit_action_echo("dip_dipping", { emitter: @character_controller, target: target_item_controller, source: source_item_controller })
       end
+
     end
+
   end
+
 end

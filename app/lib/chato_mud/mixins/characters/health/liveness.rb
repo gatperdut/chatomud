@@ -1,8 +1,13 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Health
+
         module Liveness
+
           def is_conscious?
             !is_unconscious?
           end
@@ -52,8 +57,13 @@ module ChatoMud
             @conscious = true
             @character_controller.regain_consciousness
           end
+
         end
+
       end
+
     end
+
   end
+
 end

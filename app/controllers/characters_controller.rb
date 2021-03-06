@@ -1,4 +1,5 @@
 class CharactersController < ApplicationController
+
   before_action :authenticate_player!
 
   before_action :set_character, only: [
@@ -98,4 +99,5 @@ class CharactersController < ApplicationController
       ]
     )
   end
+
 end

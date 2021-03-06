@@ -1,7 +1,11 @@
 module ChatoMud
+
   module Spawners
+
     module Factories
+
       class HealthsFactory
+
         def initialize(server)
           @server = server
         end
@@ -15,7 +19,11 @@ module ChatoMud
 
           health
         end
+
       end
+
     end
+
   end
+
 end

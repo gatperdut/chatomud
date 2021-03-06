@@ -4,8 +4,11 @@ require "chato_mud/controllers/entities/bot_controller"
 # TODO: add logging (inherited from server?)
 
 module ChatoMud
+
   module Handlers
+
     class EntitiesHandler
+
       def initialize(server)
         @server = server
         @entity_controllers = []
@@ -100,6 +103,9 @@ module ChatoMud
       def logged_in_player_controllers
         player_controllers.select(&:is_logged_in?)
       end
+
     end
+
   end
+
 end

@@ -1,9 +1,15 @@
 module ChatoMud
+
   module Mixins
+
     module Characters
+
       module Echoes
+
         module Receiver
+
           module AimSimple
+
             def recv_aim_simple(params)
               emitter       = params[:emitter]
               target_info   = params[:target_info]
@@ -20,9 +26,15 @@ module ChatoMud
 
               tx(text)
             end
+
           end
+
         end
+
       end
+
     end
+
   end
+
 end

@@ -1,4 +1,5 @@
 class CreateAttacks < ActiveRecord::Migration[6.1]
+
   def change
     create_table :attacks do |t|
       t.boolean :connects, default: true, null: false
@@ -14,4 +15,5 @@ class CreateAttacks < ActiveRecord::Migration[6.1]
       t.integer :critical_type, null: false
     end
   end
+
 end
