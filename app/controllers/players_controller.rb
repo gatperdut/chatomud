@@ -29,21 +29,6 @@ class PlayersController < ApplicationController
     head :no_content
   end
 
-  def authenticate
-    player = Player.find_by(nickname: params[:player][:nickname])
-
-    if player.blank?
-      render json: { error_messages: ["Player does not exist"] }, status: :unauthorized
-      return
-    end
-
-    if player.authenticate(params[:player][:password])
-      render json: player
-    else
-      render json: { error_messages: ["Password does not match"] }, status: :unauthorized
-    end
-  end
-
   private
 
   def set_player

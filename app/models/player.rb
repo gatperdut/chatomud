@@ -5,9 +5,9 @@ class Player < ActiveRecord::Base
   extend Devise::Models
 
   # Include default devise modules. Others available are:
-  # :lockable, :timeoutable, :trackable and :omniauthable
+  # :timeoutable, :trackable and :omniauthable
   devise :confirmable, :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :lockable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
 
   has_one :setting, dependent: :destroy
@@ -29,6 +29,11 @@ class Player < ActiveRecord::Base
 
   def current_character
     characters.find_by_active(true)
+  end
+
+  def after_unlock_path_for(resource)
+    byebug
+    super
   end
 
   private

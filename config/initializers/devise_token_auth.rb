@@ -55,9 +55,19 @@ DeviseTokenAuth.setup do |config|
   # devise confirmable module. If you want to use devise confirmable module and
   # send email, set it to true. (This is a setting for compatibility)
   config.send_confirmation_email = true
+
+  # Confirmable
   config.default_confirm_success_url = "#{Rails.application.credentials[:fe_host_url]}/authentication/confirmation"
+
+  # Recoverable
   config.default_password_reset_url = "#{Rails.application.credentials[:fe_host_url]}/authentication/password-reset"
   config.require_client_password_reset_token = true
 end
 
+# Devise Reconfirmable
 Devise.reconfirmable = false
+
+# Devise Lockable
+Devise.maximum_attempts = 3
+Devise.lock_strategy = :failed_attempts
+Devise.unlock_strategy = :email

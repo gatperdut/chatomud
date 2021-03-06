@@ -19,7 +19,7 @@ module ChatoMud
           @entity_controller     = entity_controller
           @possessed_controller  = nil
           @possessing_controller = nil
-          @quietly               = "hola"
+          @quietly               = true
         end
 
         def is_possessing?

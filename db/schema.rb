@@ -564,8 +564,8 @@ ActiveRecord::Schema.define(version: 2018_01_01_016000) do
 
   create_table "players", force: :cascade do |t|
     t.string "provider", default: "email", null: false
-    t.string "uid", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
+    t.string "uid", null: false
+    t.string "encrypted_password", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.boolean "allow_password_change", default: false
@@ -573,6 +573,9 @@ ActiveRecord::Schema.define(version: 2018_01_01_016000) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
     t.string "nickname", null: false
     t.string "image"
     t.string "email", null: false
@@ -583,6 +586,7 @@ ActiveRecord::Schema.define(version: 2018_01_01_016000) do
     t.index ["email"], name: "index_players_on_email", unique: true
     t.index ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true
     t.index ["uid", "provider"], name: "index_players_on_uid_and_provider", unique: true
+    t.index ["unlock_token"], name: "index_players_on_unlock_token", unique: true
   end
 
   create_table "posts", force: :cascade do |t|

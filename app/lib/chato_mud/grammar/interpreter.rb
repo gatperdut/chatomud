@@ -46,7 +46,7 @@ module ChatoMud
         key = json.keys[0]
         params = json[key]
 
-        action = Actions.const_get(key.to_s.camelize).new(@server, performer, params, redirect_to)
+        action = ChatoMud::Actions.const_get(key.to_s.camelize).new(@server, performer, params, redirect_to)
         action.exec
       end
 

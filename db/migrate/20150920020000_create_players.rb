@@ -4,16 +4,17 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
     create_table :players do |t|
       ## Required
       t.string :provider, null: false, default: "email"
-      t.string :uid, null: false, default: ""
+      t.string :uid, null: false
 
       ## Database authenticatable
-      t.string :encrypted_password, null: false, default: ""
+      t.string :encrypted_password, null: false
 
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
       t.boolean  :allow_password_change, default: false
 
+      # TODO: Do we want rememberable?
       ## Rememberable
       t.datetime :remember_created_at
 
@@ -24,9 +25,9 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       # t.string   :unconfirmed_email # Only if using reconfirmable
 
       ## Lockable
-      # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
-      # t.string   :unlock_token # Only if unlock strategy is :email or :both
-      # t.datetime :locked_at
+      t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
+      t.string   :unlock_token # Only if unlock strategy is :email or :both
+      t.datetime :locked_at
 
       ## User Info
       t.string :nickname, null: false
@@ -43,7 +44,7 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
     add_index :players, [:uid, :provider],     unique: true
     add_index :players, :reset_password_token, unique: true
     add_index :players, :confirmation_token,   unique: true
-    # add_index :players, :unlock_token,         unique: true
+    add_index :players, :unlock_token,         unique: true
   end
 
 end

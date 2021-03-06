@@ -41,13 +41,13 @@ module ChatoMud
           loop do
             @timestamp = Time.new.to_i
 
-            calendar.tick               if must_tick(Mixins::Periodic::Calendar::Definition::REFRESH_INTERVAL)
+            calendar.tick               if must_tick(ChatoMud::Mixins::Periodic::Calendar::Definition::REFRESH_INTERVAL)
 
-            healing_pulse.tick          if must_tick(Mixins::Periodic::HealingPulse::Definition::REFRESH_INTERVAL)
+            healing_pulse.tick          if must_tick(ChatoMud::Mixins::Periodic::HealingPulse::Definition::REFRESH_INTERVAL)
 
-            fuel_consumption_pulse.tick if must_tick(Mixins::Periodic::FuelConsumptionPulse::Definition::REFRESH_INTERVAL)
+            fuel_consumption_pulse.tick if must_tick(ChatoMud::Mixins::Periodic::FuelConsumptionPulse::Definition::REFRESH_INTERVAL)
 
-            nourishment_burner.tick     if must_tick(Mixins::Periodic::NourishmentBurner::Definition::REFRESH_INTERVAL)
+            nourishment_burner.tick     if must_tick(ChatoMud::Mixins::Periodic::NourishmentBurner::Definition::REFRESH_INTERVAL)
 
             sleep(1)
           end

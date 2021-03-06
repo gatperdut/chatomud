@@ -2,7 +2,10 @@
 
 Rails.application.routes.draw do
   mount_devise_token_auth_for "Player", at: "authentication", controllers: {
-    registrations: "overrides/registrations"
+    registrations: "overrides/registrations",
+    passwords: "overrides/passwords",
+    confirmations: "overrides/confirmations",
+    unlocks: "overrides/unlocks"
   }
 
   get "/system/info", defaults: { format: :json }
@@ -10,7 +13,6 @@ Rails.application.routes.draw do
   # resources :players, only: [:show, :create, :destroy], defaults: { format: :json }
   get  "/players/:id", to: "players#show", defaults: { format: :json }
   post "/players", to: "players#create", defaults: { format: :json }
-  post "/players/authenticate", defaults: { format: :json }
 
   get  "/characters/yours", defaults: { format: :json }
   get  "/characters/previous", defaults: { format: :json }
