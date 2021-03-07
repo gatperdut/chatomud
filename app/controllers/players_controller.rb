@@ -1,28 +1,19 @@
 class PlayersController < ApplicationController
 
-  before_action :authenticate_player!, only: [
-    :show,
-    :destroy
-  ]
-  before_action :set_player, only: [
-    :show,
-    :destroy
-  ]
+  before_action :authenticate_player!
+  before_action :set_player, only: [:show, :destroy]
+
+  def index
+    @players = Player.all
+
+    render json: @players
+  end
 
   def show
     render json: @player
   end
 
-  def create
-    player = Player.new(player_params)
-
-    if player.save
-      render json: player
-    else
-      render json: { errors: player.errors.messages }, status: :unprocessable_entity
-    end
-  end
-
+  # TODO: needed? Or use devise-token-auth?
   def destroy
     @player.destroy
 

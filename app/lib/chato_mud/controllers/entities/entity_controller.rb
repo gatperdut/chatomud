@@ -1,3 +1,4 @@
+require "chato_mud/mixins/players/roles/roled"
 require "chato_mud/controllers/entities/possession/possession_controller"
 
 module ChatoMud
@@ -7,6 +8,8 @@ module ChatoMud
     module Entities
 
       class EntityController
+
+        include Mixins::Players::Roles::Roled
 
         attr_reader :character_controller
         attr_reader :possession_controller

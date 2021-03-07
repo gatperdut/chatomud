@@ -5,6 +5,8 @@ module ChatoMud
     class Teleport < BaseAction
 
       def exec
+        return unless is_authorized?(:admin)
+
         return unless can_perform?([:unconscious])
 
         target  = @params[:target]

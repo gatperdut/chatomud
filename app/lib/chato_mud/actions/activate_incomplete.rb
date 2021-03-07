@@ -5,6 +5,8 @@ module ChatoMud
     class ActivateIncomplete < BaseAction
 
       def exec
+        return unless is_authorized?(:admin)
+
         return unless can_perform?([:unconscious])
 
         tx("Which non-possessed NPC do you want to activate? 'activate *' to calm all.")

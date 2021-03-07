@@ -5,6 +5,8 @@ module ChatoMud
     class SpawnItem < BaseAction
 
       def exec
+        return unless is_authorized?(:admin)
+
         return unless can_perform?([:unconscious])
 
         return unless check_character_is_pc(@character_controller, "NPCs are not allowed to spawn items.")

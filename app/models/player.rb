@@ -1,11 +1,14 @@
+require "chato_mud/mixins/players/roles/definition"
+
 class Player < ActiveRecord::Base
 
   before_validation :generate_setting, on: [:create]
 
+  extend ChatoMud::Mixins::Players::Roles::Definition
+
   extend Devise::Models
 
-  # Include default devise modules. Others available are:
-  # :timeoutable, :trackable and :omniauthable
+  # Other Devise modules are: :timeoutable, :trackable and :omniauthable
   devise :confirmable, :database_authenticatable, :registerable,
          :recoverable, :lockable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
@@ -14,12 +17,13 @@ class Player < ActiveRecord::Base
 
   has_many :characters, dependent: :destroy
 
+  enum role: all_roles
+
   validates :email, uniqueness: true
 
   # \A => start of the string, \z => end of the string (including \n)
   validates :nickname, format: { with: /\A\w+\z/ }, uniqueness: true, length: { within: 3..20 }
-
-  validates :nickname, :setting, presence: true
+  validates :nickname, :role, :setting, presence: true
 
   validate :max_one_active_character
 
@@ -29,11 +33,6 @@ class Player < ActiveRecord::Base
 
   def current_character
     characters.find_by_active(true)
-  end
-
-  def after_unlock_path_for(resource)
-    byebug
-    super
   end
 
   private

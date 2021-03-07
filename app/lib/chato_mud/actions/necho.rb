@@ -5,6 +5,8 @@ module ChatoMud
     class Necho < BaseAction
 
       def exec
+        return unless is_authorized?(:admin)
+
         return unless can_perform?([:unconscious])
 
         name   = @params[:name].to_s.downcase

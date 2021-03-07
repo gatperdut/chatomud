@@ -5,6 +5,8 @@ module ChatoMud
     class Mudstats < BaseAction
 
       def exec
+        return unless is_authorized?(:admin)
+
         text =  @server.superareas_handler.report
         text << @server.areas_handler.report
         text << @server.rooms_handler.report

@@ -5,6 +5,8 @@ module ChatoMud
     class CalmdownAll < BaseAction
 
       def exec
+        return unless is_authorized?(:admin)
+
         return unless can_perform?([:unconscious])
 
         character_controllers = room_controller.character_controllers

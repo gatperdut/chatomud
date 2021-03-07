@@ -44,6 +44,10 @@ module ChatoMud
           false
         end
 
+        def role
+          :regular
+        end
+
         def is_editing?
           false
         end

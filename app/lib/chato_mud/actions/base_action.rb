@@ -80,6 +80,15 @@ module ChatoMud
         end
       end
 
+      def is_authorized?(role)
+        unless entity_controller.role_gte?(role)
+          tx("You do not have the permission to do that.")
+          return false
+        end
+
+        true
+      end
+
       # TODO: there are actions that are forbidden when sitting/resting IF the item is on the ground, but allowed if on person
       # e.g. opening an item, eating/drinking, locking/unlocking.
       def can_perform?(stop_conditions)

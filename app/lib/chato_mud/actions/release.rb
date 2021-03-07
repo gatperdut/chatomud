@@ -5,6 +5,8 @@ module ChatoMud
     class Release < BaseAction
 
       def exec
+        return unless is_authorized?(:admin)
+
         unless entity_controller.possession_controller.is_possessed?
           tx("You are not currently possessing any creature.")
           return

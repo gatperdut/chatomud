@@ -5,6 +5,8 @@ module ChatoMud
     class Invisible < BaseAction
 
       def exec
+        return unless is_authorized?(:admin)
+
         if @character_controller.visibility_controller.is_invisible?
           tx("You are already invisible.")
           return

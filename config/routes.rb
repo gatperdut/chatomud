@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get "/system/info", defaults: { format: :json }
 
   # resources :players, only: [:show, :create, :destroy], defaults: { format: :json }
+  get  "/players", to: "players#index", defaults: { format: :json }
   get  "/players/:id", to: "players#show", defaults: { format: :json }
-  post "/players", to: "players#create", defaults: { format: :json }
 
   get  "/characters/yours", defaults: { format: :json }
   get  "/characters/previous", defaults: { format: :json }

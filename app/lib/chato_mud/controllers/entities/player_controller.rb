@@ -42,6 +42,14 @@ module ChatoMud
           super
         end
 
+        def model
+          @player
+        end
+
+        def role
+          @player.role.to_sym
+        end
+
         def process
           tx("Arda Marred\n".green) # ASCII art here
           loop do
