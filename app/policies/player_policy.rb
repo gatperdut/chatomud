@@ -1,7 +1,11 @@
-class RolePolicy < ApplicationPolicy
+class PlayerPolicy < ApplicationPolicy
 
   def index?
-    current_user.role == :owner || current_user.role == :admin
+    [:owner, :admin].include?(player.role.to_sym)
+  end
+
+  def query?
+    index?
   end
 
 end

@@ -6,8 +6,20 @@ class ApplicationController < ActionController::API
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  def pundit_user
+    current_player
+  end
+
+  rescue_from Pundit::NotAuthorizedError, with: :player_not_authorized
+
   def rt_not(action, subaction, payload)
     Realtime.send(action, Rails.application.credentials[:redis][:channel], { subaction: subaction }.merge(payload))
+  end
+
+  private
+
+  def player_not_authorized
+    head :forbidden
   end
 
   protected

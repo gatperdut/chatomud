@@ -4,13 +4,23 @@ class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :destroy]
 
   def index
+    authorize Player
+
     @players = Player.all
 
     render json: @players
   end
 
   def query
-    render json: []
+    authorize Player
+
+    @players = PlayerQuerier.call(
+      {
+        nickname: params[:nickname]
+      }
+    )
+
+    render json: @players
   end
 
   def show
