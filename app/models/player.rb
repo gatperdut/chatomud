@@ -35,6 +35,10 @@ class Player < ActiveRecord::Base
     characters.find_by_active(true)
   end
 
+  def token_validation_response
+    PlayerSerializer.new(self, root: false).as_json
+  end
+
   private
 
   def generate_setting

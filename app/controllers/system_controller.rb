@@ -6,8 +6,8 @@ class SystemController < ApplicationController
       rails_version: Rails.version,
       git_revision: `git rev-parse HEAD`.strip,
 
-      redis_channel: APP_CONFIG["redis_channel"],
-      socket_io_uri: APP_CONFIG["socket_io_uri"],
+      redis_channel: Rails.application.credentials[:redis][:channel],
+      socket_io_uri: Rails.application.credentials[:redis][:socket_io_uri],
 
       time_string: Server.timer.calendar.time_string
     }

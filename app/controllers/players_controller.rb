@@ -9,6 +9,10 @@ class PlayersController < ApplicationController
     render json: @players
   end
 
+  def query
+    render json: []
+  end
+
   def show
     render json: @player
   end
