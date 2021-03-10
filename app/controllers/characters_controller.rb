@@ -2,12 +2,11 @@ class CharactersController < ApplicationController
 
   before_action :authenticate_player!
 
-  before_action :set_character, only: [
-    :show,
-    :update
-  ]
+  before_action :set_character, only: [:show, :update]
 
   def show
+    authorize @character
+
     render json: @character
   end
 
@@ -48,7 +47,7 @@ class CharactersController < ApplicationController
   private
 
   def set_character
-    @character = Character.find(params[:character][:id])
+    @character = Character.find(params[:id])
   end
 
   def character_params

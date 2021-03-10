@@ -1,11 +1,7 @@
 class PlayerPolicy < ApplicationPolicy
 
   def index?
-    [:owner, :admin].include?(player.role.to_sym)
-  end
-
-  def query?
-    index?
+    player_is_admin_or_owner
   end
 
 end

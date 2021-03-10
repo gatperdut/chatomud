@@ -196,6 +196,7 @@ ActiveRecord::Schema.define(version: 2018_01_01_016000) do
     t.string "short_desc", null: false
     t.string "long_desc", null: false
     t.text "full_desc", null: false
+    t.string "image"
     t.string "code", null: false
     t.string "names", null: false
     t.string "noun", null: false
@@ -208,6 +209,7 @@ ActiveRecord::Schema.define(version: 2018_01_01_016000) do
     t.string "short_desc", null: false
     t.string "long_desc", null: false
     t.text "full_desc", null: false
+    t.string "image"
     t.string "kwords"
     t.boolean "npc", default: false, null: false
     t.boolean "gladiator", default: false, null: false
@@ -215,6 +217,8 @@ ActiveRecord::Schema.define(version: 2018_01_01_016000) do
     t.boolean "active", default: false, null: false
     t.integer "player_id"
     t.integer "room_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["player_id"], name: "index_characters_on_player_id"
     t.index ["room_id"], name: "index_characters_on_room_id"
   end

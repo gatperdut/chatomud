@@ -2,7 +2,7 @@ Player.create!(
   nickname: "tulkas",
   role: :admin,
   email: "tulkas@example.com",
-  image: nil,
+  image: "https://i.pinimg.com/736x/66/6d/45/666d45e253d4dd0ae380051529a29c6f.jpg",
   password: "tulkas",
   setting: Setting.new(
     ansi_coloring: true

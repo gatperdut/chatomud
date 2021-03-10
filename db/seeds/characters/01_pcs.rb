@@ -1,5 +1,6 @@
 Character.create!(
   name: "Gunnbjorn",
+  image: "https://variety.com/wp-content/uploads/2013/06/vikings1.jpg",
   short_desc: "a strapping man with a blond beard",
   long_desc: "A strapping man with a blond beard is here.",
   full_desc: "This is Gunns full description.",
@@ -93,6 +94,7 @@ Character.create!(
 
 Character.create!(
   name: "Irzan",
+  image: nil,
   short_desc: "an olive-toned man with a pointy beard",
   long_desc: "An olive-toned man with a pointy beard is here.",
   full_desc: "This is Irzans description.",
@@ -182,6 +184,7 @@ Character.create!(
 
 Character.create!(
   name: "Shianek",
+  image: nil,
   short_desc: "an able-bodied woman with knife-cropped hair",
   long_desc: "An able-bodied woman with knife-cropped hair is here.",
   full_desc: "This is Shianeks description.",
@@ -272,6 +275,7 @@ Character.create!(
 
 Character.create!(
   name: "someone",
+  image: nil,
   short_desc: "someone",
   long_desc: "Someone is here.",
   full_desc: "There is someone here.",
@@ -361,6 +365,7 @@ Character.create!(
 
 Character.create!(
   name: "Godigisel",
+  image: nil,
   short_desc: "a hunchbacked, muscled man",
   long_desc: "An hunchbacked, muscled man is here.",
   full_desc: "Though he might be taller were his flesh and bone more typical, this person is forced to hunch a few inches above average, with noticeable asymmetry to the slope of his shoulders, the shape of his chest, and the curve of his spine. The right arm and deltoid is somewhat bulkier than the left, but both are laden heavily with muscle. His hands are particularly gnarly things, no stranger to endless toil. For his proportion, his feet are small and his legs stout, imposing on him an awkward gait. His face isn't particularly pretty, either - oily, bumpy nose, scarred - except for his eyes. Clear, attentive, they're the brightest of blues.",
@@ -450,6 +455,7 @@ Character.create!(
 
 Character.create!(
   name: "bob",
+  image: nil,
   short_desc: "bob",
   long_desc: "test bob plz ignore.",
   full_desc: "Ignore me!!",
@@ -539,6 +545,7 @@ Character.create!(
 
 Character.create!(
   name: "Mahunga",
+  image: nil,
   short_desc: "a disabled, shady man",
   long_desc: "A disabled, shady man is here.",
   full_desc: "This is Mahungas full desc.",

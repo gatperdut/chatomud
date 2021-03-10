@@ -1,5 +1,6 @@
 Character.create!(
   name: "Halred",
+  image: nil,
   short_desc: "a straw-colored, wavy-haired young man",
   long_desc: "A straw-haired, wavy-haired young man is here.",
   full_desc: "One of the many guards in the area. He looks ready for combat.",

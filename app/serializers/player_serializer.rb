@@ -2,9 +2,9 @@ class PlayerSerializer < ActiveModel::Serializer
 
   attributes :id, :nickname, :image, :email, :role, :created_at
 
-  attribute :current_character_id
-  def current_character_id
-    object&.current_character&.id
+  attribute :current_character
+  def current_character
+    object.current_character
   end
 
   attribute :access_locked

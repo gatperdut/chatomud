@@ -6,6 +6,8 @@ class CreateCharacterTemplates < ActiveRecord::Migration[6.1]
       t.string :long_desc,  null: false
       t.text   :full_desc,  null: false
 
+      t.string :image
+
       t.string :code, null: false
 
       t.string :names, null: false, array: true

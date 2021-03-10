@@ -13,6 +13,7 @@
 * production default_confirm_url (devise-token-auth)
 * production smtp settings (action mailer)
 * Player.destroy_all ActiveRecord::DeleteRestrictionError (Cannot delete record because of dependent text_infos)
+* Use hash instead of array for enums?
 
 ## SETUP
 

@@ -12,7 +12,6 @@ Rails.application.routes.draw do
 
   # resources :players, only: [:show, :create, :destroy], defaults: { format: :json }
   get  "/players", to: "players#index", defaults: { format: :json }
-  get  "/players/query", to: "players#query", defaults: { format: :json }
   get  "/players/:id", to: "players#show", defaults: { format: :json }
 
   get  "/characters/yours", defaults: { format: :json }

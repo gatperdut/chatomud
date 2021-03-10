@@ -39,6 +39,13 @@ class Player < ActiveRecord::Base
     PlayerSerializer.new(self, root: false).as_json
   end
 
+  def current_status
+    return :locked if access_locked?
+    return :confirmed if confirmed?
+
+    :unconfirmed
+  end
+
   private
 
   def generate_setting

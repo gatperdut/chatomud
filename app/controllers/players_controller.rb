@@ -1,22 +1,17 @@
 class PlayersController < ApplicationController
 
   before_action :authenticate_player!
+
   before_action :set_player, only: [:show, :destroy]
 
   def index
     authorize Player
 
-    @players = Player.all
-
-    render json: @players
-  end
-
-  def query
-    authorize Player
-
     @players = PlayerQuerier.call(
       {
-        nickname: params[:nickname]
+        term: params[:term],
+        roles: params[:roles],
+        status: params[:status]
       }
     )
 

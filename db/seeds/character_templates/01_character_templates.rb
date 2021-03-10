@@ -2,6 +2,7 @@ CharacterTemplate.create!(
   short_desc: "a generic green goblin",
   long_desc: "A generic, green goblin lurks around.",
   full_desc: "These goblins roam the mud in abundance. Beware!",
+  image: nil,
   code: "gob_01",
   physical_attr_template: PhysicalAttrTemplate.new(
     genders: [:male, :female],
