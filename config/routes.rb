@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     registrations: "overrides/registrations",
     passwords: "overrides/passwords",
     confirmations: "overrides/confirmations",
-    unlocks: "overrides/unlocks"
+    unlocks: "overrides/unlocks",
+    sessions: "overrides/sessions",
+    token_validations: "overrides/token_validations"
   }
 
   get "/system/info", defaults: { format: :json }

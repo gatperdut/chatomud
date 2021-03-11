@@ -18,6 +18,7 @@ class PlayersController < ApplicationController
     render json: @players
   end
 
+  # TODO: needed?
   def show
     render json: @player
   end

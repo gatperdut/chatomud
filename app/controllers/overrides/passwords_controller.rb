@@ -4,6 +4,14 @@ module Overrides
 
     private
 
+    def render_create_success
+      head :ok
+    end
+
+    def render_update_success
+      head :ok
+    end
+
     def render_not_found_error
       head :ok
     end
