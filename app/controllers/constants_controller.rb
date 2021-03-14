@@ -1,3 +1,4 @@
+require "chato_mud/mixins/characters/attribute_set/definition"
 require "chato_mud/mixins/characters/skill_set/utils"
 
 require "chato_mud/mixins/grips/definition"
@@ -16,6 +17,7 @@ require "chato_mud/mixins/crafts/ingredients/definition"
 
 class ConstantsController < ApplicationController
 
+  include ChatoMud::Mixins::Characters::AttributeSet::Definition
   include ChatoMud::Mixins::Characters::SkillSet::Utils
 
   include ChatoMud::Mixins::Grips::Definition
@@ -32,22 +34,36 @@ class ConstantsController < ApplicationController
 
   include ChatoMud::Mixins::Crafts::Ingredients::Definition
 
-  def weapons
+  def all
     render json: {
+      weapons:          weapons,
+      armor:            armor,
+      fluids:           fluids,
+      ingredients:      ingredients,
+      skills:           skills,
+      skill_categories: skill_categories,
+      attributes:       attributes
+    }
+  end
+
+  private
+
+  def weapons
+    {
       grips:           all_grips,
       melee_bases:     all_melee_bases,
       ranged_bases:    all_ranged_bases,
       all_bases:       all_weapon_bases,
       melee_skills:    all_melee_skills,
       ranged_skills:   all_ranged_skills,
-      skills_per_base: skill_per_weapon_base,
+      skill_per_base:  skill_per_weapon_base,
       missile_types:   all_missile_types,
       missile_ranges:  all_ranges
     }
   end
 
   def armor
-    render json: {
+    {
       slots:                     regular_slots,
       body_parts:                all_body_parts,
       maneuver_impediments:      all_maneuver_impediments,
@@ -55,20 +71,22 @@ class ConstantsController < ApplicationController
     }
   end
 
+  # TODO: need to expose colors, weights per unit, etc.
   def fluids
-    render json: all_fluids
+    all_fluids
   end
 
   def ingredients
-    render json: {
+    {
       usage_types: all_craft_ingredient_usage_types,
       locations:   all_craft_ingredient_locations
     }
   end
 
   def skills
-    render json: {
+    {
       all: Skill.all,
+      # TODO: need to expose breaking points
       labels: all_skill_labels,
       ranks: {
         limited:       Rank.where(rate: "limited"),
@@ -81,7 +99,7 @@ class ConstantsController < ApplicationController
   end
 
   def skill_categories
-    render json: {
+    {
       all: SkillCategory.all,
       ranks: {
         limited:       CategoryRank.where(rate: "limited"),
@@ -94,7 +112,10 @@ class ConstantsController < ApplicationController
   end
 
   def attributes
-    render json: AttributeBonus.all
+    {
+      list: all_attributes,
+      bonus: AttributeBonus.all
+    }
   end
 
 end

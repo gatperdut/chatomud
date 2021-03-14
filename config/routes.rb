@@ -40,11 +40,5 @@ Rails.application.routes.draw do
 
   resources :announcements, only: [:index], defaults: { format: :json }
 
-  get "/constants/weapons",          defaults: { format: :json }
-  get "/constants/armor",            defaults: { format: :json }
-  get "/constants/fluids",           defaults: { format: :json }
-  get "/constants/ingredients",      defaults: { format: :json }
-  get "/constants/skills",           defaults: { format: :json }
-  get "/constants/skill_categories", defaults: { format: :json }
-  get "/constants/attributes",       defaults: { format: :json }
+  get "/constants", to: "constants#all", defaults: { format: :json }
 end

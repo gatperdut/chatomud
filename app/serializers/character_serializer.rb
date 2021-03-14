@@ -6,4 +6,6 @@ class CharacterSerializer < ActiveModel::Serializer
 
   attributes :npc, :gladiator, :active
 
+  has_one :attribute_set
+
 end
