@@ -33,6 +33,7 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.string :nickname, null: false
       t.string :image
       t.string :email, null: false
+      t.string :action_cable_uid, null: false
       t.integer :role, null: false, default: 0
 
       ## Tokens

@@ -583,6 +583,7 @@ ActiveRecord::Schema.define(version: 2018_01_01_016000) do
     t.string "nickname", null: false
     t.string "image"
     t.string "email", null: false
+    t.string "action_cable_uid", null: false
     t.integer "role", default: 0, null: false
     t.text "tokens"
     t.datetime "created_at", precision: 6, null: false

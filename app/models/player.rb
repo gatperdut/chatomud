@@ -3,6 +3,7 @@ require "chato_mud/mixins/players/roles/definition"
 class Player < ActiveRecord::Base
 
   before_validation :generate_setting, on: [:create]
+  before_validation :generate_action_cable_uid, on: [:create]
 
   extend ChatoMud::Mixins::Players::Roles::Definition
 
@@ -50,6 +51,10 @@ class Player < ActiveRecord::Base
 
   def generate_setting
     self.setting = Setting.new(ansi_coloring: true)
+  end
+
+  def generate_action_cable_uid
+    self.action_cable_uid = SecureRandom.hex
   end
 
   def max_one_active_character

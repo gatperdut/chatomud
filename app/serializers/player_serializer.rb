@@ -1,6 +1,6 @@
 class PlayerSerializer < ActiveModel::Serializer
 
-  attributes :id, :nickname, :image, :email, :role, :created_at
+  attributes :id, :nickname, :image, :email, :action_cable_uid, :role, :created_at
 
   attribute :current_character
   def current_character

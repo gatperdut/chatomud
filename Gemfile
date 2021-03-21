@@ -17,9 +17,11 @@ gem "puma", "~> 5.0"
 gem "active_model_serializers", "~> 0.10.12"
 # gem 'jbuilder', '~> 2.7'
 
-# Use Redis adapter to run Action Cable in production
+# Redis
 gem "redis", "~> 4.2.5"
-# gem 'redis', '~> 4.0'
+
+# SecureRandom
+gem "securerandom", "~> 0.1.0"
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

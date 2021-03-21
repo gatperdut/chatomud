@@ -49,7 +49,7 @@ class RoomsController < ApplicationController
       Server.rooms_handler.find(@room.id).reload_model
       Server.rooms_handler.find(@room.id).anchor
 
-      rt_not(:room, :updated, { room: @room })
+      ActionCable.server.broadcast("map_channel", { model: "room", action: "update", room: RoomSerializer.new(@room) })
 
       render json: @room
     else

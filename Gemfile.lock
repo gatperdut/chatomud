@@ -180,6 +180,7 @@ GEM
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
     ruby-sun-times (0.1.5)
+    securerandom (0.1.0)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -222,6 +223,7 @@ DEPENDENCIES
   require_all (~> 3.0.0)
   rspec-rails (~> 4.0.2)
   ruby-sun-times (~> 0.1.5)
+  securerandom (~> 0.1.0)
   spring
   sqlite3 (~> 1.4)
   stopwords-filter (~> 0.4.1)
