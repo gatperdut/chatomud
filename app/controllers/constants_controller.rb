@@ -85,7 +85,24 @@ class ConstantsController < ApplicationController
 
   def skills
     {
-      all: Skill.all,
+      list: {
+        all:           Skill.all,
+        melee:         Skill.where(skill_category: "melee"),
+        ranged:        Skill.where(skill_category: "ranged"),
+        martial:       Skill.where(skill_category: "martial"),
+        athletics:     Skill.where(skill_category: "athletics"),
+        communication: Skill.where(skill_category: "communication"),
+        forging:       Skill.where(skill_category: "forging")
+      },
+      names: {
+        all:           Skill.all.pluck(:name),
+        melee:         Skill.where(skill_category: "melee").pluck(:name),
+        ranged:        Skill.where(skill_category: "ranged").pluck(:name),
+        martial:       Skill.where(skill_category: "martial").pluck(:name),
+        athletics:     Skill.where(skill_category: "athletics").pluck(:name),
+        communication: Skill.where(skill_category: "communication").pluck(:name),
+        forging:       Skill.where(skill_category: "forging").pluck(:name)
+      },
       # TODO: need to expose breaking points
       labels: all_skill_labels,
       ranks: {
@@ -100,7 +117,8 @@ class ConstantsController < ApplicationController
 
   def skill_categories
     {
-      all: SkillCategory.all,
+      all:   SkillCategory.all,
+      names: SkillCategory.all.pluck(:name),
       ranks: {
         limited:       CategoryRank.where(rate: "limited"),
         below_average: CategoryRank.where(rate: "below_average"),

@@ -13,7 +13,7 @@ class ApplicationController < ActionController::API
   rescue_from Pundit::NotAuthorizedError, with: :player_not_authorized
 
   def rt_not(action, subaction, payload)
-    Realtime.send(action, Rails.application.credentials[:redis][:channel], { subaction: subaction }.merge(payload))
+    # ChatoMud::Realtime.send(action, Rails.application.credentials[:redis][:channel], { subaction: subaction }.merge(payload))
   end
 
   private

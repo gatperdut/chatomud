@@ -10,7 +10,7 @@ class AreasController < ApplicationController
   ]
 
   def index
-    render json: Area.all, status: :ok
+    render json: Area.all, include: [:rooms]
   end
 
   def rooms

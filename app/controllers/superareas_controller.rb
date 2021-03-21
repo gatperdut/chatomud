@@ -10,7 +10,7 @@ class SuperareasController < ApplicationController
   ]
 
   def index
-    render json: Superarea.all, status: :ok
+    render json: Superarea.all, include: [areas: [:rooms]]
   end
 
   def show

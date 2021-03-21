@@ -8,4 +8,6 @@ class CharacterSerializer < ActiveModel::Serializer
 
   has_one :attribute_set
 
+  has_one :skill_set
+
 end
