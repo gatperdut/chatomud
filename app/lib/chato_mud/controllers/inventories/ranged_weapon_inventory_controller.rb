@@ -6,7 +6,7 @@ module ChatoMud
 
     module Inventories
 
-      class RangedWeaponInventoryController < BoxInventoryController
+      class RangedWeaponInventoryController < ChatoMud::Controllers::Inventories::BoxInventoryController
 
         def loaded_missile_controller
           @item_controllers[0]

@@ -31,9 +31,9 @@ module ChatoMud
           @room = room
           @character_controllers = []
           @furniture_controllers = []
-          @inventory_controller = Inventories::BoxInventoryController.new(@server, self, @room.inventory)
+          @inventory_controller = ChatoMud::Controllers::Inventories::BoxInventoryController.new(@server, self, @room.inventory)
           @room.furnitures.each do |furniture|
-            Furnitures::FurnitureController.new(@server, furniture, self)
+            ChatoMud::Controllers::Furnitures::FurnitureController.new(@server, furniture, self)
           end
           @server.rooms_handler.add_room_controller(self)
         end

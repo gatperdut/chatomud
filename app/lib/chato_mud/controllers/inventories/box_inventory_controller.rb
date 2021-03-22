@@ -7,7 +7,7 @@ module ChatoMud
 
     module Inventories
 
-      class BoxInventoryController < InventoryController
+      class BoxInventoryController < ChatoMud::Controllers::Inventories::InventoryController
 
         attr_reader :lid_controller
 

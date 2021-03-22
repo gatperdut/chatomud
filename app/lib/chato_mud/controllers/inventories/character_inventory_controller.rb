@@ -26,7 +26,7 @@ module ChatoMud
 
     module Inventories
 
-      class CharacterInventoryController < InventoryController
+      class CharacterInventoryController < ChatoMud::Controllers::Inventories::InventoryController
 
         extend Mixins::Slots::Definition
         extend Mixins::BodyParts::Definition
