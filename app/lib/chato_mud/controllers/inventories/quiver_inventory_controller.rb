@@ -6,7 +6,7 @@ module ChatoMud
 
     module Inventories
 
-      class QuiverInventoryController < ChatoMud::Controllers::Inventories::BoxInventoryController
+      class QuiverInventoryController < Inventories::BoxInventoryController
 
         def missile_controllers(missile_type)
           @item_controllers.select do |item_controller|

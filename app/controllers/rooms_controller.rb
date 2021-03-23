@@ -59,7 +59,6 @@ class RoomsController < ApplicationController
 
   def destroy
     if @room.destroy
-
       room_controller = Server.rooms_handler.find(@room.id)
       room_controller.bye
       room_controller.anchor
@@ -99,8 +98,13 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(
       :title,
-      :description,
       :area_id,
+      :description,
+      :description_nighttime,
+      :arena,
+      :always_lit,
+      :enclosed,
+      :roughness_multiplier,
       :nr_id,
       :er_id,
       :sr_id,

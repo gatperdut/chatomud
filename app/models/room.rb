@@ -46,7 +46,9 @@ class Room < ApplicationRecord
 
   validates_inclusion_of :always_lit, :enclosed, :arena, in: [true, false]
 
-  validates :roughness_multiplier, presence: true, numericality: { greater_than_or_equal_to: 0.0 }
+  validates :title, :description, :area_id, :roughness_multiplier, presence: true
+
+  validates :roughness_multiplier, numericality: { greater_than_or_equal_to: 0.0 }
 
   def anchor(destroying)
     update(nr: Room.find(nr_id)) unless nr_id.nil? || destroying

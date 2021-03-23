@@ -6,7 +6,7 @@ module ChatoMud
 
     module Inventories
 
-      class WoundInventoryController < ChatoMud::Controllers::Inventories::BoxInventoryController
+      class WoundInventoryController < Inventories::BoxInventoryController
 
         def lodged_missile_controller
           @item_controllers[0]

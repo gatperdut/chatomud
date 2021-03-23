@@ -6,7 +6,7 @@ module ChatoMud
 
     module Inventories
 
-      class SheathInventoryController < ChatoMud::Controllers::Inventories::BoxInventoryController
+      class SheathInventoryController < Inventories::BoxInventoryController
 
         def sheathed_weapon_controller
           @item_controllers[0]
