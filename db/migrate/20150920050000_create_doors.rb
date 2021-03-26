@@ -16,19 +16,19 @@ class CreateDoors < ActiveRecord::Migration[6.1]
       t.references :dr,  null: true, index: true
     end
 
-    add_foreign_key :doors, :rooms, column: :nr_id,  on_delete: :restrict
-    add_foreign_key :doors, :rooms, column: :er_id,  on_delete: :restrict
-    add_foreign_key :doors, :rooms, column: :sr_id,  on_delete: :restrict
-    add_foreign_key :doors, :rooms, column: :wr_id,  on_delete: :restrict
-    add_foreign_key :doors, :rooms, column: :ur_id,  on_delete: :restrict
-    add_foreign_key :doors, :rooms, column: :dr_id,  on_delete: :restrict
+    add_foreign_key :doors, :rooms, column: :nr_id, on_delete: :nullify
+    add_foreign_key :doors, :rooms, column: :er_id, on_delete: :nullify
+    add_foreign_key :doors, :rooms, column: :sr_id, on_delete: :nullify
+    add_foreign_key :doors, :rooms, column: :wr_id, on_delete: :nullify
+    add_foreign_key :doors, :rooms, column: :ur_id, on_delete: :nullify
+    add_foreign_key :doors, :rooms, column: :dr_id, on_delete: :nullify
 
-    add_foreign_key :rooms, :doors, column: :nd_id,  on_delete: :restrict
-    add_foreign_key :rooms, :doors, column: :ed_id,  on_delete: :restrict
-    add_foreign_key :rooms, :doors, column: :sd_id,  on_delete: :restrict
-    add_foreign_key :rooms, :doors, column: :wd_id,  on_delete: :restrict
-    add_foreign_key :rooms, :doors, column: :ud_id,  on_delete: :restrict
-    add_foreign_key :rooms, :doors, column: :dd_id,  on_delete: :restrict
+    add_foreign_key :rooms, :doors, column: :nd_id, on_delete: :nullify
+    add_foreign_key :rooms, :doors, column: :ed_id, on_delete: :nullify
+    add_foreign_key :rooms, :doors, column: :sd_id, on_delete: :nullify
+    add_foreign_key :rooms, :doors, column: :wd_id, on_delete: :nullify
+    add_foreign_key :rooms, :doors, column: :ud_id, on_delete: :nullify
+    add_foreign_key :rooms, :doors, column: :dd_id, on_delete: :nullify
   end
 
 end

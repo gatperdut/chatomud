@@ -63,4 +63,6 @@ class Door < ApplicationRecord
     errors.add(:base, "there is a door already present between the two rooms") if counter.positive?
   end
 
+  # TODO: Make sure the rooms are actually connected before creating the door.
+
 end

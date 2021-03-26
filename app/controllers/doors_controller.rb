@@ -25,7 +25,7 @@ class DoorsController < ApplicationController
       Server.doors_handler.find(door.id).reload_model
       Server.doors_handler.find(door.id).anchor
 
-      rt_not(:door, :created, { door: door })
+      ActionCable.server.broadcast("map_channel", { model: "door", action: "create", data: DoorSerializer.new(door) })
 
       render json: door
     else
@@ -54,7 +54,7 @@ class DoorsController < ApplicationController
     door_controller.bye
     door_controller.anchor
 
-    rt_not(:door, :deleted, { door: @door })
+    ActionCable.server.broadcast("map_channel", { model: "door", action: "destroy", data: DoorSerializer.new(@door) })
   end
 
   private
@@ -68,13 +68,13 @@ class DoorsController < ApplicationController
       :short_desc,
       :long_desc,
       :full_desc,
+      :see_through,
       :nr_id,
       :er_id,
       :sr_id,
       :wr_id,
       :ur_id,
-      :dr_id,
-      :see_through
+      :dr_id
     )
   end
 

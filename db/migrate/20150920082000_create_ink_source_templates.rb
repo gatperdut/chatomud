@@ -12,7 +12,7 @@ class CreateInkSourceTemplates < ActiveRecord::Migration[6.1]
     end
 
     add_foreign_key :ink_source_templates,        :item_templates,                                    on_delete: :cascade
-    add_foreign_key :ink_source_templates,        :item_templates, column: :spawned_item_template_id, on_delete: :restrict
+    add_foreign_key :ink_source_templates,        :item_templates, column: :spawned_item_template_id, on_delete: :cascade
   end
 
 end

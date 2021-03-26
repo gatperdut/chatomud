@@ -35,12 +35,12 @@ class CreateRooms < ActiveRecord::Migration[6.1]
 
     add_foreign_key :rooms, :areas, on_delete: :cascade
 
-    add_foreign_key :rooms, :rooms, column: :nr_id,  on_delete: :restrict
-    add_foreign_key :rooms, :rooms, column: :er_id,  on_delete: :restrict
-    add_foreign_key :rooms, :rooms, column: :sr_id,  on_delete: :restrict
-    add_foreign_key :rooms, :rooms, column: :wr_id,  on_delete: :restrict
-    add_foreign_key :rooms, :rooms, column: :ur_id,  on_delete: :restrict
-    add_foreign_key :rooms, :rooms, column: :dr_id,  on_delete: :restrict
+    add_foreign_key :rooms, :rooms, column: :nr_id, on_delete: :nullify
+    add_foreign_key :rooms, :rooms, column: :er_id, on_delete: :nullify
+    add_foreign_key :rooms, :rooms, column: :sr_id, on_delete: :nullify
+    add_foreign_key :rooms, :rooms, column: :wr_id, on_delete: :nullify
+    add_foreign_key :rooms, :rooms, column: :ur_id, on_delete: :nullify
+    add_foreign_key :rooms, :rooms, column: :dr_id, on_delete: :nullify
   end
 
 end

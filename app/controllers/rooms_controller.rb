@@ -35,7 +35,7 @@ class RoomsController < ApplicationController
       Server.rooms_handler.find(room.id).reload_model
       Server.rooms_handler.find(room.id).anchor
 
-      ActionCable.server.broadcast("map_channel", { model: "room", action: "create", room: RoomSerializer.new(room) })
+      ActionCable.server.broadcast("map_channel", { model: "room", action: "create", data: RoomSerializer.new(room) })
 
       render json: room
     else
@@ -49,7 +49,7 @@ class RoomsController < ApplicationController
       Server.rooms_handler.find(@room.id).reload_model
       Server.rooms_handler.find(@room.id).anchor
 
-      ActionCable.server.broadcast("map_channel", { model: "room", action: "update", room: RoomSerializer.new(@room) })
+      ActionCable.server.broadcast("map_channel", { model: "room", action: "update", data: RoomSerializer.new(@room) })
 
       render json: @room
     else

@@ -14,7 +14,7 @@ class CreateFurnitures < ActiveRecord::Migration[6.1]
       t.references :furniture_template, null: false, index: true
     end
 
-    add_foreign_key :furnitures, :rooms, on_delete: :restrict
+    add_foreign_key :furnitures, :rooms, on_delete: :cascade
   end
 
 end

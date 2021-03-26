@@ -17,7 +17,7 @@ class CreateTextInfos < ActiveRecord::Migration[6.1]
       t.integer    :script_skill_mod,   null: true
     end
 
-    add_foreign_key :text_infos, :characters, on_delete: :restrict
+    add_foreign_key :text_infos, :characters, on_delete: :nullify
   end
 
 end
